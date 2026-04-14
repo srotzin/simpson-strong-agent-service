@@ -168,8 +168,43 @@ app.get('/.well-known/ai-plugin.json', (req, res) => {
       url: `${host}/.well-known/openapi.json`
     },
     logo_url: `${host}/logo.png`,
-    contact_email: 'srotzin@me.com',
+    contact_email: 'protocol@hiveagentiq.com',
     legal_info_url: `${host}/legal`
+  });
+});
+
+// ── A2A Agent Card (Google Agent2Agent protocol) ─────────────
+app.get('/.well-known/agent.json', (req, res) => {
+  const host = process.env.SERVICE_URL || 'https://simpson-strong-agent.onrender.com';
+  res.json({
+    name: 'Simpson Strong-Tie Agent',
+    description: 'Agent-to-agent construction hardware specialist. Complete Simpson Strong-Tie C-C-2024 catalog with 400+ structural connectors, holdowns, anchors, hurricane ties, and fasteners. Load table queries, SDC classification, code compliance checking, corrosion advisory, and material selection. Paid via x402 USDC on Base L2.',
+    url: host,
+    version: '1.0.0',
+    protocol_version: 'a2a/1.0',
+    capabilities: [
+      { name: 'product_lookup', description: 'Search 400+ Simpson Strong-Tie products by name, application, or specification' },
+      { name: 'load_analysis', description: 'Check allowable loads against specified requirements for any connector' },
+      { name: 'holdown_sizing', description: 'Select correct holdown for given uplift force and deflection limits' },
+      { name: 'hurricane_tie_selection', description: 'Select hurricane ties by wind speed, exposure category, and roof geometry' },
+      { name: 'seismic_classification', description: 'Classify Seismic Design Category A-F per ASCE 7 and IBC' },
+      { name: 'code_reference', description: 'Reference IBC, IRC, ASCE 7, and NDS code sections for structural connections' },
+      { name: 'corrosion_advisory', description: 'Material and coating guidance for treated lumber and coastal environments' }
+    ],
+    authentication: {
+      schemes: ['x402'],
+      discovery_free: true
+    },
+    payment: {
+      protocol: 'x402',
+      currency: 'USDC',
+      network: 'base',
+      address: '0x78B3B3C356E89b5a69C488c6032509Ef4260B6bf'
+    },
+    provider: {
+      organization: 'Hive Agent IQ',
+      url: 'https://www.hiveagentiq.com'
+    }
   });
 });
 
