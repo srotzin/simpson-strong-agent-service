@@ -1,0 +1,411 @@
+/**
+ * Simpson Strong-Tie Complete Product Database
+ * Source: C-C-2024 Catalog + strongtie.com
+ * All loads ASD (Allowable Stress Design)
+ */
+
+const PRODUCTS = [
+  // === JOIST HANGERS ===
+  { id:"LUS", model:"LUS", name:"Light-Capacity U-Shaped Hanger", category:"joist_hangers",
+    desc:"Face-mount hanger with double-shear nailing. Standard residential floor/roof.",
+    gauge:18, finish:["G90","ZMAX","SS"], sizes:["2x4","2x6","2x8","2x10","2x12","2x14"],
+    fasteners:'0.148"×3" or 0.162"×3.5" nails; SD screws optional',
+    loads:{LUS24:{F_down:675,F_up:325},LUS26:{F_down:1105,F_up:530},LUS28:{F_down:1395,F_up:665},LUS210:{F_down:1670,F_up:790},LUS212:{F_down:1670,F_up:790},LUS214:{F_down:1670,F_up:790}},
+    load_basis:"DF/SP, CD=1.0, nails", sdc:"A-F", esr:"ESR-1153",
+    applications:["floor","roof","deck"], codes:["IBC §2304.10","IRC R502.6"],
+    link:"https://www.strongtie.com/lus" },
+
+  { id:"HUS", model:"HUS", name:"Heavy U-Shaped Hanger", category:"joist_hangers",
+    desc:"High-capacity face-mount hanger. SDS screws included. Gap tolerance 3/8\" with reduction.",
+    gauge:14, finish:["G90","ZMAX","SS"], sizes:["2x6","2x8","2x10","2x12","2x14","4x6-4x14","3-2x6-3-2x14"],
+    fasteners:'SDS 1/4"×2-1/2" screws (included)',
+    loads:{HUS26:{F_down:1480,F_up:710},HUS28:{F_down:2180,F_up:1045},HUS210:{F_down:2730,F_up:1310},HUS212:{F_down:3200,F_up:1535},HUS410:{F_down:3895,F_up:1870}},
+    load_basis:"DF/SP, SDS screws", sdc:"A-F", esr:"ESR-1153",
+    applications:["floor","roof","deck","beam"], codes:["IBC §2304.10","IRC R502.6"],
+    link:"https://www.strongtie.com/hus" },
+
+  { id:"HHUS", model:"HHUS/HGUS", name:"Heavy Header/Girder Hanger", category:"joist_hangers",
+    desc:"Extra-heavy hangers for glulam, LVL, multi-ply. HGUS for girder truss connections.",
+    gauge:"12-10", finish:["G90","ZMAX"], sizes:['3-1/8" to 7" wide glulam','Multi-ply LVL'],
+    fasteners:'SDS screws, 16d nails, through-bolts',
+    loads:{HHUS210_2:{F_down:4500,F_up:2160},HGUS410_2:{F_down:6930,F_up:3325}},
+    load_basis:"DF/SP", sdc:"A-F", esr:"ESR-1153",
+    applications:["floor","beam","glulam","commercial"], codes:["IBC §2304.10"],
+    link:"https://www.strongtie.com/joisthangers" },
+
+  { id:"GLT", model:"GLT/GLB", name:"Glulam Top/Bottom-Flange Hanger", category:"joist_hangers",
+    desc:"Top-flange (GLT) and bottom-flange (GLB) for glulam-to-glulam and glulam-to-steel.",
+    gauge:"10-7", finish:["G90"], sizes:['3-1/8" to 6-3/4" wide, up to 24" deep'],
+    fasteners:'Through-bolts, SDS screws, bearing contact',
+    loads:{GLT4_H9:{F_down:6500},GLB5_14:{F_down:10500}},
+    load_basis:"DF/SP", sdc:"A-F", esr:"ESR-1153",
+    applications:["beam","glulam","commercial"], codes:["IBC §2304.10"],
+    link:"https://www.strongtie.com/joisthangers" },
+
+  // === HURRICANE TIES ===
+  { id:"H1", model:"H1/H1A", name:"Hurricane Tie (Single-Sided)", category:"hurricane_ties",
+    desc:"Single-sided rafter/truss-to-plate. Most economical uplift connector.",
+    gauge:18, finish:["G90","ZMAX","SS"], sizes:["2x4-2x6 truss/rafter"],
+    fasteners:'8-10d×1.5" nails or #9×1.5" SD screws',
+    loads:{H1_nails:{uplift:510,lat_F1:130,lat_F2:175},H1_sds:{uplift:590,lat_F1:155,lat_F2:200}},
+    load_basis:"CD=1.60, DF/SP", sdc:"A-F", esr:"ESR-1289",
+    applications:["roof","truss","hurricane"], codes:["IRC R802.11.1","FBC 2325.1"],
+    link:"https://www.strongtie.com/hurricaneties" },
+
+  { id:"H2.5A", model:"H2.5A", name:"Hurricane Tie (2-Sided, Embossed)", category:"hurricane_ties",
+    desc:"Two-sided embossed tie. Higher capacity than H1. Standard in high-wind zones.",
+    gauge:18, finish:["G90","ZMAX","SS"], sizes:["2x4-2x8 truss/rafter"],
+    fasteners:'6-8d×1.5" nails or SD screws per side',
+    loads:{"H2.5A_df_sp":{uplift:765,lat_F1:285,lat_F2:350},"H2.5A_spf":{uplift:620,lat_F1:230,lat_F2:285}},
+    load_basis:"CD=1.60", sdc:"A-F", esr:"ESR-1289",
+    applications:["roof","truss","hurricane"], codes:["IRC R802.11.1","FBC 2325.1"],
+    link:"https://www.strongtie.com/hurricaneties" },
+
+  { id:"H10", model:"H10/H10A", name:"Hurricane Tie (Heavy Gauge)", category:"hurricane_ties",
+    desc:"Heavy-gauge adjustable tie. Fits sloped rafters. Top-nailed + side-nailed.",
+    gauge:14, finish:["G90","ZMAX"], sizes:["2x4-2x12 rafter/truss"],
+    fasteners:'16d×3.5" common nails or SDS screws',
+    loads:{H10A_df_sp:{uplift:1415,lat_F1:530,lat_F2:590}},
+    load_basis:"CD=1.60, DF/SP", sdc:"A-F", esr:"ESR-1289",
+    applications:["roof","truss","hurricane","seismic"], codes:["IRC R802.11.1"],
+    link:"https://www.strongtie.com/hurricaneties" },
+
+  // === STRAPS & TIES ===
+  { id:"LSTA", model:"LSTA", name:"Light Strap Tie", category:"straps",
+    desc:"Versatile light-gauge strap. Plate-to-stud, stud-to-header, roof-to-wall continuity. Field-bendable.",
+    gauge:20, finish:["G90","ZMAX"], sizes:['LSTA9(9")','LSTA12(12")','LSTA15(15")','LSTA18(18")','LSTA21(21")','LSTA24(24")'],
+    fasteners:'8d nails or #9×1.5" SD screws',
+    loads:{LSTA9:{tension:520},LSTA12:{tension:690},LSTA15:{tension:865},LSTA18:{tension:1035},LSTA21:{tension:1210},LSTA24:{tension:1380}},
+    load_basis:"DF/SP, CD=1.60", sdc:"A-F", esr:"ESR-1948",
+    applications:["wall","roof","truss","retrofit","continuous_load_path"], codes:["IBC §2308.5","IRC R602.10"],
+    link:"https://www.strongtie.com/strapsandties" },
+
+  { id:"MSTA", model:"MSTA", name:"Medium Strap Tie", category:"straps",
+    desc:'Medium-gauge 1-3/8" strap. Continuity across floor lines, drag strut connections.',
+    gauge:16, finish:["G90","ZMAX"], sizes:['MSTA9-MSTA36'],
+    fasteners:'10d nails or SDS screws',
+    loads:{MSTA9:{tension:935},MSTA12:{tension:1245},MSTA15:{tension:1560},MSTA18:{tension:1870},MSTA24:{tension:2495},MSTA36:{tension:3740}},
+    load_basis:"DF/SP, CD=1.60", sdc:"A-F", esr:"ESR-1948",
+    applications:["wall","floor","drag_strut","seismic","continuous_load_path"], codes:["IBC §2308.5"],
+    link:"https://www.strongtie.com/strapsandties" },
+
+  { id:"MST", model:"MST/CMST", name:"Medium/Coiled Strap Tie", category:"straps",
+    desc:"MST pre-cut straps. CMST 25/100ft coils for field-cut lengths. Continuous load path.",
+    gauge:16, finish:["G90","ZMAX"], sizes:["MST27-MST60","CMST1225(25ft)","CMST12100(100ft)"],
+    fasteners:'10d common nails',
+    loads:{MST37:{tension:2340},MST48:{tension:2870},MST60:{tension:3740}},
+    load_basis:"DF/SP, CD=1.60", sdc:"A-F", esr:"ESR-1948",
+    applications:["wall","floor","continuous_load_path","multi_story"], codes:["IBC §2308.5"],
+    link:"https://www.strongtie.com/strapsandties" },
+
+  { id:"DSP", model:"DSP/RSP/SSP", name:"Stud & Plate Ties", category:"straps",
+    desc:"Stud-plate ties for continuous load path at floor lines. DSP double-stud, SSP single-stud.",
+    gauge:"16-14", finish:["G90","ZMAX"], sizes:["DSP","RSP","SSP"],
+    fasteners:'10d nails or SDS screws',
+    loads:{DSP:{tension:1950},SSP:{tension:1200}},
+    load_basis:"CD=1.60, DF/SP", sdc:"A-F",
+    applications:["wall","floor","continuous_load_path","multi_story"], codes:["IRC R602.10.9","IBC §2308.5"],
+    link:"https://www.strongtie.com/strapsandties" },
+
+  // === POST BASES ===
+  { id:"ABU", model:"ABU", name:"Adjustable Post Base (Uplift)", category:"post_bases",
+    desc:"Adjustable-height elevated post base. Uplift + lateral resistance. Prevents wood-concrete contact.",
+    gauge:12, finish:["G90","ZMAX"], sizes:["ABU44(4x4)","ABU46(4x6)","ABU66(6x6)"],
+    fasteners:'SDS screws (included) + 1/2"-5/8" anchor bolt',
+    loads:{ABU44:{down:2985,uplift:1575,lateral:925},ABU46:{down:3880,uplift:2040,lateral:1250},ABU66:{down:5255,uplift:2500,lateral:1580}},
+    load_basis:"DF/SP, CD=1.60", sdc:"A-F", esr:"ESR-1917",
+    applications:["foundation","deck","post","pergola"], codes:["IRC R407.3","IBC §2304.12"],
+    link:"https://www.strongtie.com/postbases" },
+
+  { id:"CBS", model:"CBS/CBSQ", name:"Column Base Standoff", category:"post_bases",
+    desc:'Concealed post base with 1" standoff. CBS round bolt pattern, CBSQ square.',
+    gauge:12, finish:["G90","ZMAX"], sizes:["CBS44","CBSQ44","CBS46","CBSQ66"],
+    fasteners:'SDS screws + anchor bolts',
+    loads:{CBS44:{down:3200,uplift:1350,lateral:780},CBSQ66:{down:6800,uplift:3200,lateral:2100}},
+    load_basis:"DF/SP", sdc:"A-F", esr:"ESR-1917",
+    applications:["foundation","deck","post","patio"], codes:["IRC R407.3"],
+    link:"https://www.strongtie.com/postbases" },
+
+  { id:"EPB", model:"EPB", name:"Elevated Post Base (Heavy-Duty)", category:"post_bases",
+    desc:"Heavy-duty elevated base. Full moment connection for carports, pavilions, covered porches.",
+    gauge:"7-10", finish:["G90","HDG"], sizes:["EPB44","EPB46","EPB66","EPB88"],
+    fasteners:'Through-bolts, SDS screws, anchor bolts',
+    loads:{EPB44:{down:5600,uplift:3900,lateral:2400},EPB66:{down:11200,uplift:7800,lateral:4800}},
+    load_basis:"DF/SP", sdc:"A-F", esr:"ESR-1917",
+    applications:["foundation","post","carport","pavilion","commercial"], codes:["IBC §2304.12"],
+    link:"https://www.strongtie.com/postbases" },
+
+  // === ANGLES & PLATES ===
+  { id:"A35", model:"A35/A35F", name:"Framing Angle", category:"angles",
+    desc:"Most common framing angle. A35F has strengthening flange. Joist/rafter-to-plate, stud-to-plate.",
+    gauge:18, finish:["G90","ZMAX"], sizes:['4-1/2"×1-7/16"×1-3/16"'],
+    fasteners:'10d nails or SD screws',
+    loads:{A35_9nails:{F1:590,F2:440,uplift:355},A35_12nails:{F1:730,F2:570,uplift:420}},
+    load_basis:"DF/SP, CD=1.60", sdc:"A-F", esr:"ESR-1276",
+    applications:["wall","floor","roof","framing"], codes:["IRC R602.3"],
+    link:"https://www.strongtie.com/anglesandplates" },
+
+  { id:"A34", model:"A34", name:"Framing Angle (Skewable)", category:"angles",
+    desc:"Skewable 2-way angle for hips, valleys, non-perpendicular framing.",
+    gauge:18, finish:["G90","ZMAX"], sizes:['2-1/2"×1-7/16"×2-1/4"'],
+    fasteners:'10d nails',
+    loads:{A34:{F1:510,F2:395,uplift:300}},
+    load_basis:"DF/SP, CD=1.60", sdc:"A-F", esr:"ESR-1276",
+    applications:["roof","truss","framing","hip_valley"], codes:["IRC R602.3"],
+    link:"https://www.strongtie.com/anglesandplates" },
+
+  { id:"LTP", model:"LTP4/LTP5", name:"Lateral Tie Plate", category:"angles",
+    desc:"Pre-bent lateral tie plates for rim-to-sill and stud-to-plate lateral connections.",
+    gauge:16, finish:["G90","ZMAX"], sizes:['LTP4(3"×4-3/4")','LTP5(3"×5-7/16")'],
+    fasteners:'10d nails or SDS screws',
+    loads:{LTP4_G:{lateral:835},LTP4_H:{lateral:620},LTP5_G:{lateral:1045},LTP5_H:{lateral:775}},
+    load_basis:"DF/SP, CD=1.60", sdc:"A-F", esr:"ESR-1276",
+    applications:["wall","sill","bracing","lateral"], codes:["IRC R602.10.9"],
+    link:"https://www.strongtie.com/anglesandplates" },
+
+  { id:"GA", model:"GA Series", name:"Gusset Angle", category:"angles",
+    desc:"Heavy gusset angles for beam-to-post and beam-to-column connections.",
+    gauge:"10-7", finish:["G90"], sizes:['GA1(8"×6")','GA2(10"×8")'],
+    fasteners:'Through-bolts + nails/screws',
+    loads:{GA1:{shear:3200},GA2:{shear:5600}},
+    load_basis:"DF/SP", sdc:"A-D",
+    applications:["beam","post","commercial"], codes:["IBC §2304.10"],
+    link:"https://www.strongtie.com/anglesandplates" },
+
+  { id:"HL", model:"HL Series", name:"Heavy Angle", category:"angles",
+    desc:"Heavy L-angles for beam seat connections. HL35 to HL55.",
+    gauge:"12-7", finish:["G90"], sizes:['HL35(3"×5")','HL45(4"×5")','HL55(5"×5")'],
+    fasteners:'1/2" bolts or lag screws + nails',
+    loads:{HL35:{seat:1820},HL45:{seat:3250},HL55:{seat:4680}},
+    load_basis:"DF/SP, 1/2\" bolt", sdc:"A-F",
+    applications:["beam","ledger","commercial"], codes:["IBC §2304.10"],
+    link:"https://www.strongtie.com/anglesandplates" },
+
+  // === HOLDOWNS ===
+  { id:"HDU", model:"HDU", name:"Holdown (SDS Screw Type)", category:"holdowns",
+    desc:"Pre-deflected screw holdown. SDS screws supplied. Being replaced by HDUE (2025).",
+    gauge:"14-7", finish:["G90","HDG"], sizes:["HDU2","HDU4","HDU5","HDU8","HDU11","HDU14"],
+    fasteners:'1/4"×2.5" SDS screws (included); 5/8"-1" anchor bolt',
+    loads:{HDU2:{tension:3075,deflection:0.114},HDU4:{tension:4565,deflection:0.105},HDU5:{tension:5645,deflection:0.116},HDU8:{tension:9225,deflection:0.125},HDU11:{tension:12740,deflection:0.141},HDU14:{tension:14930,deflection:0.159}},
+    load_basis:"DF/SP, CD=1.60, ESR-2330", sdc:"A-F", esr:"ESR-2330",
+    applications:["wall","shearwall","foundation","seismic"], codes:["IBC §2305.3","SDPWS §4.3.6"],
+    link:"https://www.strongtie.com/holdowns" },
+
+  { id:"HDUE", model:"HDUE", name:"Holdown (Enhanced, Next-Gen)", category:"holdowns",
+    desc:"Next-gen replacing HDU. Enhanced predeflection, reduced displacement, wider bolt compatibility.",
+    gauge:"14-7", finish:["G90","HDG"], sizes:["HDUE2","HDUE4","HDUE5","HDUE8","HDUE11","HDUE14"],
+    fasteners:'1/4"×2.5" SDS screws (included); 5/8"-1" anchor bolt',
+    loads:{HDUE2:{tension:3250},HDUE4:{tension:4800},HDUE5:{tension:5900},HDUE8:{tension:9500},HDUE11:{tension:13200},HDUE14:{tension:15500}},
+    load_basis:"CD=1.60, DF/SP", sdc:"A-F", esr:"ESR-2330",
+    applications:["wall","shearwall","foundation","seismic"], codes:["IBC §2305.3","SDPWS §4.3.6"],
+    link:"https://www.strongtie.com/holdowns" },
+
+  { id:"HHDQ", model:"HHDQ", name:"Heavy-Duty Holdown (Bolt Type)", category:"holdowns",
+    desc:"Bolt-type holdown for multi-story shearwalls. Through-bolted. Higher capacity for severe seismic/wind.",
+    gauge:"7-3", finish:["G90"], sizes:["HHDQ11","HHDQ14"],
+    fasteners:'5/8"-3/4" through-bolts; 1" anchor bolt',
+    loads:{HHDQ11:{tension:13900},HHDQ14:{tension:17200}},
+    load_basis:"CD=1.60, ESR-2330", sdc:"A-F", esr:"ESR-2330",
+    applications:["shearwall","multi_story","seismic","commercial"], codes:["IBC §2305.3"],
+    link:"https://www.strongtie.com/holdowns" },
+
+  { id:"PHD_STHD", model:"PHD/STHD", name:"Panel/Strap-Tie Holdown", category:"holdowns",
+    desc:"PHD: purlin holdowns. STHD: continuous strap-type over multiple floors for direct uplift path.",
+    gauge:"14-10", finish:["G90","ZMAX"], sizes:["PHD2-PHD6","STHD10-STHD14"],
+    fasteners:'SDS screws; anchor rods for STHD',
+    loads:{PHD2:{tension:2810},PHD6:{tension:5645},STHD14:{tension:14205}},
+    load_basis:"CD=1.60, DF/SP", sdc:"A-F", esr:"ESR-2330",
+    applications:["wall","shearwall","multi_story","continuous_load_path"], codes:["IBC §2305.3"],
+    link:"https://www.strongtie.com/holdowns" },
+
+  // === SHEARWALLS ===
+  { id:"SSW", model:"SSW", name:"Steel Strong-Wall Shearwall", category:"shearwalls",
+    desc:"Prefab steel shearwall. Highest loads. Pre-attached studs. Narrow walls, garage portals, high-seismic.",
+    gauge:10, finish:["Galvanized"], sizes:['SSW12(12")','SSW15(15")','SSW18(18")','SSW21(21")','SSW24(24")'],
+    fasteners:'SDS screws (included); 3/4"-1" anchor bolts',
+    loads:{SSW12X7:{shear_seismic:3140,shear_wind:3675},SSW15X7:{shear_seismic:4705,shear_wind:5505},SSW18X7:{shear_seismic:6260,shear_wind:7330},SSW21X7:{shear_seismic:7300,shear_wind:8550},SSW24X7:{shear_seismic:8345,shear_wind:9770}},
+    load_basis:"ESR-2147", sdc:"A-F", esr:"ESR-2147",
+    applications:["wall","shearwall","seismic","garage_portal","narrow_wall"], codes:["IBC §2306.3","SDPWS §4.3","IRC R602.10.6.1"],
+    link:"https://www.strongtie.com/strongwall" },
+
+  { id:"WSWH", model:"WSWH", name:"Wood Strong-Wall Shearwall", category:"shearwalls",
+    desc:"Prefab wood-frame shearwall. Factory-assembled with structural sheathing.",
+    gauge:"N/A", finish:["Primed"], sizes:["WSWH12-WSWH48"],
+    fasteners:'Pre-installed nails; anchor bolts per plan',
+    loads:{WSWH24:{shear_seismic:2880,shear_wind:3370},WSWH36:{shear_seismic:4320,shear_wind:5055},WSWH48:{shear_seismic:5760,shear_wind:6740}},
+    load_basis:"ESR-2147", sdc:"A-F", esr:"ESR-2147",
+    applications:["wall","shearwall","residential"], codes:["IBC §2306.3","IRC R602.10.6.1"],
+    link:"https://www.strongtie.com/strongwall" },
+
+  { id:"SRS", model:"Strong-Rod Systems", name:"Continuous Rod Tie-Down", category:"shearwalls",
+    desc:"Engineered continuous rod system for multi-story uplift. Eliminates stacked holdowns.",
+    gauge:"N/A", finish:["Galvanized","HDG"], sizes:['5/8"-1-1/4" rods, 2-5 story'],
+    fasteners:'Coupler nuts, bearing plates, take-up devices',
+    loads:{"5/8_rod":{tension:12500},"3/4_rod":{tension:18200},"7/8_rod":{tension:24800},"1_rod":{tension:33000}},
+    load_basis:"ASTM A36 rod, ESR-2320", sdc:"A-F", esr:"ESR-2320",
+    applications:["shearwall","multi_story","seismic","commercial","continuous_load_path"], codes:["IBC §2305.3","SDPWS §4.3.6"],
+    link:"https://www.strongtie.com/strongrod" },
+
+  // === ANCHORS & BOLTS ===
+  { id:"SSTB", model:"SSTB", name:"Sill-to-Stem Anchor Bolt", category:"anchors",
+    desc:"Sill plate-to-stem wall anchor. Replaces J-bolts. No nut/washer needed above sill.",
+    gauge:"N/A", finish:["G90"], sizes:['SSTB16(16")','SSTB20(20")','SSTB24(24")','SSTB28(28")','SSTB32(32")'],
+    fasteners:'Epoxy or cement grout into stem wall',
+    loads:{SSTB16:{tension:1925,shear:1300},SSTB20:{tension:2425,shear:1300},SSTB24:{tension:2670,shear:1300},SSTB28:{tension:2670,shear:1300}},
+    load_basis:"f'c ≥ 2500 psi", sdc:"A-F", esr:"ESR-1545",
+    applications:["foundation","slab","retrofit","sill_plate"], codes:["IRC R403.1.6","IBC §1905.1.8"],
+    link:"https://www.strongtie.com/anchors" },
+
+  { id:"DTT", model:"DTT1Z/DTT2Z", name:"Deck Tension Tie", category:"anchors",
+    desc:"Lateral load connector for deck ledger-to-house. Required by IRC. DTT2Z higher capacity.",
+    gauge:14, finish:["ZMAX"], sizes:["DTT1Z(single)","DTT2Z(double)"],
+    fasteners:'3/8" lag screws + SDS screws',
+    loads:{DTT1Z:{tension:750,note:"1500/pair"},DTT2Z:{tension:1090,note:"2180/pair"}},
+    load_basis:"IRC R507.2.3", sdc:"A-C", esr:"ESR-3444",
+    applications:["deck","ledger","lateral"], codes:["IRC R507.2.3","IBC §1604.8.3"],
+    link:"https://www.strongtie.com/deckconnectors" },
+
+  { id:"FJA", model:"FJA/FSA/FRFP", name:"Foundation Anchors", category:"anchors",
+    desc:"Foundation-specific anchors. FJA: J-bolt alt. FSA: strap anchor. FRFP: retrofit plate.",
+    gauge:"Various", finish:["G90","HDG"], sizes:["Various"],
+    fasteners:'Epoxy or wet-set',
+    loads:{FRFP:{shear:2100,tension:1500}},
+    load_basis:"f'c ≥ 2500 psi", sdc:"A-F",
+    applications:["foundation","retrofit","slab","sill_plate"], codes:["IRC R403.1.6","IBC §1905.1.8"],
+    link:"https://www.strongtie.com/anchors" },
+
+  // === FASTENERS ===
+  { id:"SDS", model:"SDS", name:"Strong-Drive SDS Heavy-Duty Connector Screw", category:"fasteners",
+    desc:'Primary structural screw for Simpson connectors. 1/4" hex-head. Replaces nails in many connectors.',
+    gauge:"N/A", finish:["Double-Barrier"], sizes:['1"-4" lengths, 1/4" dia'],
+    fasteners:'Self-drilling, hex drive',
+    loads:{SDS25112:{shear:320,withdrawal:350},SDS25212:{shear:475,withdrawal:465},SDS25300:{shear:530,withdrawal:530}},
+    load_basis:"DF, per ESR-2236", sdc:"A-F", esr:"ESR-2236",
+    applications:["all","connector","framing","ledger"], codes:["IBC §2303.4","NDS Ch.12"],
+    link:"https://www.strongtie.com/sds" },
+
+  { id:"SDWH", model:"SDWH", name:"Strong-Drive Timber-Hex HDG Screw", category:"fasteners",
+    desc:"Heavy-duty structural wood screw. HDG exterior. Replaces lag screws for ledger/beam.",
+    gauge:"N/A", finish:["HDG"], sizes:['2-7/8"-10", 0.195"-0.276" dia'],
+    fasteners:'Hex-head, self-drilling',
+    loads:{SDWH19300:{shear:465,withdrawal:385},SDWH19600:{shear:755,withdrawal:520},SDWH27600:{shear:990,withdrawal:680}},
+    load_basis:"DF/SP, ESR-3046", sdc:"A-F", esr:"ESR-3046",
+    applications:["ledger","beam","deck","heavy_timber","exterior"], codes:["IBC §2303.4","NDS Ch.12"],
+    link:"https://www.strongtie.com/sdwh" },
+
+  { id:"SDWC", model:"SDWC", name:"Strong-Drive Truss Screw", category:"fasteners",
+    desc:"Truss/rafter-to-top-plate screw. Replaces toenails. Code-listed alternative to H-series ties.",
+    gauge:"N/A", finish:["Double-Barrier"], sizes:['SDWC15600(6")','SDWC15800(8")'],
+    fasteners:'Self-drilling, T-25 drive',
+    loads:{SDWC15600_single:{uplift:450,lateral:210},SDWC15600_pair:{uplift:900,lateral:420}},
+    load_basis:"DF/SP, CD=1.60, ESR-3178", sdc:"A-F", esr:"ESR-3178",
+    applications:["roof","truss","hurricane","rafter"], codes:["IRC R802.11","IBC §2304.10"],
+    link:"https://www.strongtie.com/sdwc" },
+
+  // === TRUSS CONNECTORS ===
+  { id:"GBC", model:"GBC", name:"Girder Bracket Connector", category:"truss_connectors",
+    desc:"Top-chord bearing for girder truss connections. Transfers vertical loads carried-to-girder.",
+    gauge:"14-10", finish:["G90"], sizes:["Single/multi-ply girders"],
+    fasteners:'SDS screws + nails',
+    loads:{GBC:{down:3500}},
+    load_basis:"DF/SP", sdc:"A-F",
+    applications:["truss","roof","girder"], codes:["TPI 1-2014"],
+    link:"https://www.strongtie.com/trussconnectors" },
+
+  // === DECK CONNECTORS ===
+  { id:"DJTZ", model:"DJTZ", name:"Deck Joist Tie (Concealed)", category:"deck_connectors",
+    desc:"Concealed deck joist connector. Lateral + uplift. ZMAX for treated lumber.",
+    gauge:14, finish:["ZMAX"], sizes:["2x6-2x12"],
+    fasteners:'SDS screws',
+    loads:{DJTZ:{lateral:465,uplift:285}},
+    load_basis:"DF/SP", sdc:"A-C",
+    applications:["deck","joist","lateral"], codes:["IRC R507","IBC §1604.8.3"],
+    link:"https://www.strongtie.com/deckconnectors" },
+
+  { id:"DPTZ", model:"DPTZ", name:"Deck Post Tie (Concealed)", category:"deck_connectors",
+    desc:"Concealed deck post-to-beam connector. Lateral, uplift, download. ZMAX.",
+    gauge:12, finish:["ZMAX"], sizes:["4x4 and 6x6 posts"],
+    fasteners:'SDS screws + through-bolts',
+    loads:{DPTZ4:{down:3200,uplift:1850,lateral:980}},
+    load_basis:"DF/SP", sdc:"A-C",
+    applications:["deck","post","beam"], codes:["IRC R507"],
+    link:"https://www.strongtie.com/deckconnectors" },
+
+  // === RIDGE/HIP CONNECTORS ===
+  { id:"HRC", model:"HRC/HHRC", name:"Hip Ridge Connector", category:"ridge_connectors",
+    desc:"Hip/valley rafter-to-ridge beam. HHRC heavy-duty. Uplift + lateral at roof peak.",
+    gauge:"16-12", finish:["G90","ZMAX"], sizes:["2x and 4x rafters"],
+    fasteners:'10d-16d nails or SDS screws',
+    loads:{HRC:{uplift:870,lateral:430},HHRC:{uplift:1750,lateral:860}},
+    load_basis:"DF/SP, CD=1.60", sdc:"A-F",
+    applications:["roof","ridge","hip","valley"], codes:["IRC R802.6","IBC §2308.8"],
+    link:"https://www.strongtie.com/ridgeconnectors" },
+
+  { id:"VPA", model:"VPA", name:"Variable Pitch Connector", category:"ridge_connectors",
+    desc:"Adjustable-angle connector for variable-pitch roofs. 0:12 to 12:12.",
+    gauge:14, finish:["G90","ZMAX"], sizes:["2x4-2x12 rafters"],
+    fasteners:'10d nails or SDS screws',
+    loads:{VPA:{uplift:590,lateral:280}},
+    load_basis:"Varies by pitch", sdc:"A-F",
+    applications:["roof","ridge","variable_pitch"], codes:["IRC R802.6"],
+    link:"https://www.strongtie.com/ridgeconnectors" },
+
+  // === CONCEALED ===
+  { id:"CJTZ", model:"CJTZ", name:"Concealed Joist Tie", category:"concealed",
+    desc:"Hidden joist hanger for clean architectural appearance. Exposed-beam construction.",
+    gauge:14, finish:["G90"], sizes:["2x6-2x12"],
+    fasteners:'SDS screws (concealed)',
+    loads:{CJTZ28:{F_down:1200},CJTZ210:{F_down:1650},CJTZ212:{F_down:2100}},
+    load_basis:"DF/SP", sdc:"A-C",
+    applications:["floor","beam","architectural"], codes:["IBC §2304.10"],
+    link:"https://www.strongtie.com/concealedconnectors" },
+
+  // === OUTDOOR / DECORATIVE ===
+  { id:"OA", model:"Outdoor Accents", name:"Decorative Structural Connectors", category:"outdoor",
+    desc:"Black powder-coat decorative + structural. Pergolas, gazebos, pavilions.",
+    gauge:"12-7", finish:["Black powder coat(DERA)"], sizes:["Post bases, caps, angles, straps, hangers"],
+    fasteners:'Outdoor Accents structural screws (black)',
+    loads:{},
+    load_basis:"See individual models", sdc:"A-C",
+    applications:["deck","pergola","patio","outdoor","architectural"], codes:["IRC R507"],
+    link:"https://www.strongtie.com/outdooraccents" }
+];
+
+// === APPLICATION MAPPING ===
+const APPLICATIONS = {
+  roof: { name:"Roof Framing", desc:"Rafters, trusses, ridge, hip/valley connections" },
+  truss: { name:"Truss Construction", desc:"Truss-to-plate, girder connections, bracing" },
+  wall: { name:"Wall Framing", desc:"Stud-to-plate, bracing, shearwalls, holdowns" },
+  floor: { name:"Floor Framing", desc:"Joist-to-beam, headers, ledgers, hangers" },
+  foundation: { name:"Foundation/Slab", desc:"Sill anchors, post bases, stem wall anchors" },
+  deck: { name:"Deck Construction", desc:"Joist ties, post bases, ledger connections" },
+  shearwall: { name:"Shearwalls", desc:"Lateral force-resisting systems, holdowns" },
+  seismic: { name:"Seismic/High-Wind", desc:"SDC D-F rated products, high-wind zones" },
+  beam: { name:"Beam/Header", desc:"Beam seats, hangers, gussets, glulam connections" },
+  continuous_load_path: { name:"Continuous Load Path", desc:"Foundation-to-roof tie-down chain" },
+  retrofit: { name:"Retrofit/Repair", desc:"Existing structure upgrades and repairs" },
+  commercial: { name:"Commercial", desc:"Heavy-duty commercial/industrial applications" },
+  hurricane: { name:"Hurricane Zone", desc:"FBC high-wind zone products" },
+  glulam: { name:"Glulam/Engineered", desc:"Glulam, LVL, engineered wood connections" }
+};
+
+// === COATINGS ===
+const COATINGS = {
+  G90: { name:"Standard Galvanized", zinc_oz_ft2:0.90, use:"Interior or dry exterior. NOT for treated lumber.", compatible_lumber:["untreated","borate"] },
+  ZMAX: { name:"ZMAX® (G185)", zinc_oz_ft2:1.85, use:"Exterior + treated lumber contact. ACQ/CA-C/CCA approved.", compatible_lumber:["ACQ","CA-C","CCA","MCA","untreated","borate"] },
+  HDG: { name:"Hot-Dip Galvanized", zinc_oz_ft2:1.25, use:"Marine/industrial environments.", compatible_lumber:["ACQ","CA-C","CCA","MCA","untreated"] },
+  SS: { name:"Stainless Steel 304/316", zinc_oz_ft2:null, use:"Marine/coastal. Highest corrosion resistance.", compatible_lumber:["all"] }
+};
+
+// === LOAD DURATION FACTORS ===
+const LOAD_DURATION = {
+  normal: { cd:1.00, desc:"Normal (10-year floor load)" },
+  snow: { cd:1.15, desc:"Snow (2-month)" },
+  roof: { cd:1.25, desc:"Roof live (7-day)" },
+  wind_seismic: { cd:1.60, desc:"Wind/Earthquake (10 min)" }
+};
+
+// === LRFD CONVERSION ===
+const LRFD = { seismic:1.43, wind:1.67 };
+
+module.exports = { PRODUCTS, APPLICATIONS, COATINGS, LOAD_DURATION, LRFD };

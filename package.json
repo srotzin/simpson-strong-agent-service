@@ -1,0 +1,19 @@
+{
+  "name": "simpson-strong-agent",
+  "version": "1.0.0",
+  "description": "Simpson Strong-Tie Strong Agent — Agent-to-Agent MCP + REST service with full catalog, load tables, SDC classification, and x402 payments. Headless. No human UI.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Agent-to-agent service — no browser tests\" && exit 0"
+  },
+  "keywords": ["simpson", "strong-tie", "structural", "mcp", "agent-to-agent", "x402", "hiveforge"],
+  "author": "Atlas-Construction-Pro / HiveForge",
+  "license": "ISC",
+  "engines": { "node": ">=18" },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "helmet": "^8.1.0"
+  }
+}

@@ -1,0 +1,1197 @@
+{
+  "catalog_metadata": {
+    "title": "Simpson Strong-Tie Structural Connector Catalog",
+    "catalog_number": "C-C-2024",
+    "effective_dates": "2024-2025",
+    "publisher": "Simpson Strong-Tie Company Inc.",
+    "address": "5956 West Las Positas Blvd, Pleasanton, CA 94588",
+    "phone": "(800) 999-5099",
+    "website": "https://www.strongtie.com",
+    "total_pages": 372,
+    "note": "Current catalog is C-C-2026 (2026-2027). C-C-2024 replaced by C-C-2026 effective 2026.",
+    "latest_catalog_url": "https://www.strongtie.com/resources/literature/wood-construction-connectors-catalog",
+    "code_compliance": {
+      "ibc_editions": ["2012", "2015", "2018", "2021", "2024"],
+      "irc_editions": ["2012", "2015", "2018", "2021", "2024"],
+      "asc_7": "ASCE 7-16 and ASCE 7-22",
+      "nds": "AWC NDS 2018/2024",
+      "sdpws": "AWC SDPWS 2015/2021",
+      "total_esr_reports": "60+",
+      "city_of_los_angeles": true,
+      "florida_building_code": true
+    },
+    "allowable_load_methodology": {
+      "basis": "ASD (Allowable Stress Design)",
+      "safety_factor": 3,
+      "deflection_limit": "1/8 inch",
+      "nds_fastener_limit": "per NDS calculation",
+      "load_duration_factors": {
+        "floor_100": "CD=1.00 (normal 10-year load)",
+        "snow_115": "CD=1.15 (2-month snow load)",
+        "roof_125": "CD=1.25 (7-day roof load)",
+        "wind_seismic_160": "CD=1.60 (wind/earthquake)"
+      },
+      "lrfd_conversion": {
+        "seismic_multiplier": 1.43,
+        "wind_multiplier": 1.67
+      }
+    }
+  },
+
+  "product_lines": {
+
+    "joist_hangers": {
+      "description": "Face-mount and top-flange hangers connecting joists, beams, and rafters to supporting members",
+      "source_url": "https://www.strongtie.com/facemounthangersssl_solidsawnlumberconnector/lus_hanger/p/lus",
+      "esr_reports": ["ESR-2552", "ESR-1396"],
+
+      "LUS": {
+        "full_name": "LUS Light-Capacity U-Shaped Hanger with Double-Shear Nailing",
+        "description": "Economical face-mount hanger for common lumber sizes with double-shear nailing for greater strength with fewer nails",
+        "material": "18 gauge steel",
+        "finish": "G90 Galvanized; ZMAX® available (Z suffix); Stainless Steel available (SS suffix)",
+        "application": "Face-mount single and multi-ply joists to headers, beams, ledgers",
+        "installation_notes": [
+          "Double-shear nailing: nails driven at angle through joist into header",
+          "With 2x carrying members: 0.162x3.5 nails into header reduce load to 0.64; 0.148x3 nails reduce load to 0.77",
+          "With 3x carrying members: no load reduction with correct nail sizes",
+          "Cannot be modified"
+        ],
+        "fasteners_standard": {
+          "single_2x": "0.148\" x 3\" nails (header and joist)",
+          "other_sizes": "0.162\" x 3.5\" nails (header and joist)"
+        },
+        "models": [
+          {"model": "LUS24", "gauge": 18, "width_in": 1.5625, "height_in": 3.125, "bearing_in": 1.75, "joist_size": "2x4", "finish": "G90"},
+          {"model": "LUS24Z", "gauge": 18, "width_in": 1.5625, "height_in": 3.125, "bearing_in": 1.75, "joist_size": "2x4", "finish": "ZMAX"},
+          {"model": "LUS26", "gauge": 18, "width_in": 1.5625, "height_in": 4.75, "bearing_in": 1.75, "joist_size": "2x6", "finish": "G90"},
+          {"model": "LUS26Z", "gauge": 18, "width_in": 1.5625, "height_in": 4.75, "bearing_in": 1.75, "joist_size": "2x6", "finish": "ZMAX"},
+          {"model": "LUS26SS", "gauge": 18, "width_in": 1.5625, "height_in": 4.75, "bearing_in": 1.75, "joist_size": "2x6", "finish": "Stainless"},
+          {"model": "LUS28", "gauge": 18, "width_in": 1.5625, "height_in": 6.625, "bearing_in": 1.75, "joist_size": "2x8", "finish": "G90"},
+          {"model": "LUS28Z", "gauge": 18, "width_in": 1.5625, "height_in": 6.625, "bearing_in": 1.75, "joist_size": "2x8", "finish": "ZMAX"},
+          {"model": "LUS28SS", "gauge": 18, "width_in": 1.5625, "height_in": 6.625, "bearing_in": 1.75, "joist_size": "2x8", "finish": "Stainless"},
+          {"model": "LUS210", "gauge": 18, "width_in": 1.5625, "height_in": 7.8125, "bearing_in": 1.75, "joist_size": "2x10", "finish": "G90"},
+          {"model": "LUS210Z", "gauge": 18, "width_in": 1.5625, "height_in": 7.8125, "bearing_in": 1.75, "joist_size": "2x10", "finish": "ZMAX"},
+          {"model": "LUS210SS", "gauge": 18, "width_in": 1.5625, "height_in": 7.8125, "bearing_in": 1.75, "joist_size": "2x10", "finish": "Stainless"},
+          {"model": "LUS24-2", "gauge": 18, "width_in": 3.125, "height_in": 3.125, "bearing_in": 2.0, "joist_size": "Double 2x4", "finish": "G90"},
+          {"model": "LUS26-2", "gauge": 18, "width_in": 3.125, "height_in": 4.875, "bearing_in": 2.0, "joist_size": "Double 2x6", "finish": "G90"},
+          {"model": "LUS26-2Z", "gauge": 18, "width_in": 3.125, "height_in": 4.875, "bearing_in": 2.0, "joist_size": "Double 2x6", "finish": "ZMAX"},
+          {"model": "LUS26-2SS", "gauge": 18, "width_in": 3.125, "height_in": 4.875, "bearing_in": 2.0, "joist_size": "Double 2x6", "finish": "Stainless"},
+          {"model": "LUS26-3", "gauge": 18, "width_in": 4.625, "height_in": 4.125, "bearing_in": 2.0, "joist_size": "Triple 2x6", "finish": "G90"},
+          {"model": "LUS28-2", "gauge": 18, "width_in": 3.125, "height_in": 7.0, "bearing_in": 2.0, "joist_size": "Double 2x8", "finish": "G90"},
+          {"model": "LUS28-2Z", "gauge": 18, "width_in": 3.125, "height_in": 7.0, "bearing_in": 2.0, "joist_size": "Double 2x8", "finish": "ZMAX"},
+          {"model": "LUS28-2SS", "gauge": 18, "width_in": 3.125, "height_in": 7.0, "bearing_in": 2.0, "joist_size": "Double 2x8", "finish": "Stainless"},
+          {"model": "LUS28-3", "gauge": 18, "width_in": 4.625, "height_in": 6.25, "bearing_in": 2.0, "joist_size": "Triple 2x8", "finish": "G90"},
+          {"model": "LUS210-2", "gauge": 18, "width_in": 3.125, "height_in": 9.0, "bearing_in": 2.0, "joist_size": "Double 2x10", "finish": "G90"},
+          {"model": "LUS210-2Z", "gauge": 18, "width_in": 3.125, "height_in": 9.0, "bearing_in": 2.0, "joist_size": "Double 2x10", "finish": "ZMAX"},
+          {"model": "LUS210-2SS", "gauge": 18, "width_in": 3.125, "height_in": 9.0, "bearing_in": 2.0, "joist_size": "Double 2x10", "finish": "Stainless"},
+          {"model": "LUS210-3", "gauge": 18, "width_in": 4.625, "height_in": 8.1875, "bearing_in": 2.0, "joist_size": "Triple 2x10", "finish": "G90"},
+          {"model": "LUS214-2", "gauge": 18, "width_in": 3.125, "height_in": 10.9375, "bearing_in": 2.0, "joist_size": "Double 2x14", "finish": "G90"},
+          {"model": "LUS36", "gauge": 18, "width_in": 2.5625, "height_in": 5.25, "bearing_in": 2.0, "joist_size": "3x6", "finish": "G90"},
+          {"model": "LUS310", "gauge": 18, "width_in": 2.5625, "height_in": 7.25, "bearing_in": 2.0, "joist_size": "3x10", "finish": "G90"},
+          {"model": "LUS44", "gauge": 18, "width_in": 3.5625, "height_in": 3.0, "bearing_in": 2.0, "joist_size": "4x4", "finish": "G90"},
+          {"model": "LUS46", "gauge": 18, "width_in": 3.5625, "height_in": 4.75, "bearing_in": 2.0, "joist_size": "4x6", "finish": "G90"},
+          {"model": "LUS48", "gauge": 18, "width_in": 3.5625, "height_in": 6.75, "bearing_in": 2.0, "joist_size": "4x8", "finish": "G90"},
+          {"model": "LUS410", "gauge": 18, "width_in": 3.5625, "height_in": 8.75, "bearing_in": 2.0, "joist_size": "4x10", "finish": "G90"},
+          {"model": "LUS414", "gauge": 18, "width_in": 3.5625, "height_in": 10.75, "bearing_in": 2.0, "joist_size": "4x14", "finish": "G90"}
+        ],
+        "allowable_loads_with_sd_screws": {
+          "note": "SD Connector Screws (SD9112 = #9 x 1-1/2\"; SD9212 = #9 x 2-1/2\")",
+          "units": "lbs",
+          "load_duration_factor": "(160) = wind/seismic",
+          "models": [
+            {"model": "LUS24", "header_fasteners": "(4) SD9112", "joist_fasteners": "(2) SD9212", "df_sp_uplift_160": 495, "spf_hf_note": "see catalog"},
+            {"model": "LUS26", "header_fasteners": "(4) SD9112", "joist_fasteners": "(4) SD9212", "df_sp_uplift_160": 1180, "spf_hf_note": "see catalog"},
+            {"model": "LUS28", "header_fasteners": "(6) SD9112", "joist_fasteners": "(4) SD9212", "df_sp_uplift_160": 1335, "spf_hf_note": "see catalog"},
+            {"model": "LUS210", "header_fasteners": "(8) SD9112", "joist_fasteners": "(4) SD9212", "df_sp_uplift_160": 1240, "spf_hf_note": "see catalog"},
+            {"model": "LUS26-2", "header_fasteners": "(4) SD9112", "joist_fasteners": "(4) SD9212", "df_sp_uplift_160": 1180, "spf_hf_note": "see catalog"},
+            {"model": "LUS28-2", "header_fasteners": "(6) SD9112", "joist_fasteners": "(4) SD9212", "df_sp_uplift_160": 1335, "spf_hf_note": "see catalog"},
+            {"model": "LUS210-2", "header_fasteners": "(8) SD9112", "joist_fasteners": "(6) SD9212", "df_sp_uplift_160": 1240, "spf_hf_note": "see catalog"},
+            {"model": "LUS214-2", "header_fasteners": "(10) SD9112", "joist_fasteners": "(6) SD9212", "df_sp_uplift_160": 1995, "spf_hf_note": "see catalog"}
+          ]
+        }
+      },
+
+      "HUS": {
+        "full_name": "HUS Heavy U-Shaped Hanger with Double-Shear Nailing",
+        "description": "Heavy-duty face-mount hanger for higher loads; double-shear nailing; cannot be used with I-joists",
+        "material": "16 gauge (2x sizes) or 14 gauge (multi-ply/4x sizes)",
+        "finish": "G90 Galvanized; ZMAX available; Stainless Steel (SS suffix) for select models",
+        "application": "Face-mount higher-load joists, beams; NOT for I-joists",
+        "installation_notes": [
+          "Cannot be modified",
+          "Not designed for welded or nailer applications",
+          "With 2x carrying members: load reductions apply (0.64 or 0.77 depending on nail size)",
+          "Joist nails must be driven at angle through joist into header"
+        ],
+        "models": [
+          {"model": "HUS26", "gauge": 16, "width_in": 1.625, "height_in": 5.375, "bearing_in": 3.0, "joist_size": "2x6", "finish": "G90"},
+          {"model": "HUS26Z", "gauge": 16, "width_in": 1.625, "height_in": 5.375, "bearing_in": 3.0, "joist_size": "2x6", "finish": "ZMAX"},
+          {"model": "HUS28", "gauge": 16, "width_in": 1.625, "height_in": 7.0, "bearing_in": 3.0, "joist_size": "2x8", "finish": "G90"},
+          {"model": "HUS28Z", "gauge": 16, "width_in": 1.625, "height_in": 7.0, "bearing_in": 3.0, "joist_size": "2x8", "finish": "ZMAX"},
+          {"model": "HUS210", "gauge": 16, "width_in": 1.625, "height_in": 9.0, "bearing_in": 3.0, "joist_size": "2x10", "finish": "G90"},
+          {"model": "HUS210Z", "gauge": 16, "width_in": 1.625, "height_in": 9.0, "bearing_in": 3.0, "joist_size": "2x10", "finish": "ZMAX"},
+          {"model": "HUS1.81/10", "gauge": 16, "width_in": 1.8125, "height_in": 8.875, "bearing_in": 3.0, "joist_size": "1-3/4x9-1/2 (LVL/I-Joist flange)", "finish": "G90"},
+          {"model": "HUS26-2", "gauge": 14, "width_in": 3.125, "height_in": 5.1875, "bearing_in": 2.0, "joist_size": "Double 2x6", "finish": "G90"},
+          {"model": "HUS28-2", "gauge": 14, "width_in": 3.125, "height_in": 7.1875, "bearing_in": 2.0, "joist_size": "Double 2x8", "finish": "G90"},
+          {"model": "HUS210-2", "gauge": 14, "width_in": 3.125, "height_in": 9.1875, "bearing_in": 2.0, "joist_size": "Double 2x10", "finish": "G90"},
+          {"model": "HUS212-2", "gauge": 14, "width_in": 3.125, "height_in": 10.75, "bearing_in": 2.0, "joist_size": "Double 2x12", "finish": "G90"},
+          {"model": "HUS46", "gauge": 14, "width_in": 3.5625, "height_in": 5.0, "bearing_in": 2.0, "joist_size": "4x6", "finish": "G90"},
+          {"model": "HUS48", "gauge": 14, "width_in": 3.5625, "height_in": 6.9375, "bearing_in": 2.0, "joist_size": "4x8", "finish": "G90"},
+          {"model": "HUS48SS", "gauge": 14, "width_in": 3.5625, "height_in": 6.9375, "bearing_in": 2.0, "joist_size": "4x8", "finish": "Stainless"},
+          {"model": "HUS410", "gauge": 14, "width_in": 3.5625, "height_in": 8.9375, "bearing_in": 2.0, "joist_size": "4x10", "finish": "G90"},
+          {"model": "HUS412", "gauge": 14, "width_in": 3.5625, "height_in": 10.5, "bearing_in": 2.0, "joist_size": "4x12", "finish": "G90"}
+        ],
+        "allowable_loads_with_sd_screws": {
+          "note": "SD10212 = SD #10 x 2-1/2\" screw",
+          "units": "lbs",
+          "models": [
+            {"model": "HUS26", "joist_fasteners": "(6) SD10212", "face_fasteners": "(14) SD10212", "df_sp_uplift_160": 860, "df_sp_floor_100": 3400, "df_sp_snow_115": 3400, "df_sp_roof_125": 3400, "spf_hf_uplift_160": 740, "spf_hf_floor_100": 2815, "spf_hf_snow_115": 2920, "spf_hf_roof_125": 2920},
+            {"model": "HUS28", "joist_fasteners": "(8) SD10212", "face_fasteners": "(22) SD10212", "df_sp_uplift_160": 1490, "df_sp_floor_100": 4180, "df_sp_snow_115": 4180, "df_sp_roof_125": 4180, "spf_hf_uplift_160": 1280, "spf_hf_floor_100": 3145, "spf_hf_snow_115": 3340, "spf_hf_roof_125": 3475},
+            {"model": "HUS210", "joist_fasteners": "(10) SD10212", "face_fasteners": "(30) SD10212", "df_sp_uplift_160": 2120, "df_sp_floor_100": 4695, "df_sp_snow_115": 4965, "df_sp_roof_125": 4965, "spf_hf_uplift_160": 1820, "spf_hf_floor_100": 3475, "spf_hf_snow_115": 3720, "spf_hf_roof_125": 3885},
+            {"model": "HUS26-2", "joist_fasteners": "(4) SD10212", "face_fasteners": "(4) SD10212", "df_sp_uplift_160": 1375, "df_sp_floor_100": 860, "spf_hf_uplift_160": 1260, "spf_hf_floor_100": 1010},
+            {"model": "HUS28-2", "joist_fasteners": "(6) SD10212", "face_fasteners": "(6) SD10212", "df_sp_uplift_160": 1950, "df_sp_floor_100": 1970, "spf_hf_uplift_160": 1680, "spf_hf_floor_100": 1515},
+            {"model": "HUS210-2", "joist_fasteners": "(8) SD10212", "face_fasteners": "(8) SD10212", "df_sp_uplift_160": 2440, "df_sp_floor_100": 2625, "spf_hf_uplift_160": 2095, "spf_hf_floor_100": 2020},
+            {"model": "HUS212-2", "joist_fasteners": "(10) SD10212", "face_fasteners": "(10) SD10212", "df_sp_uplift_160": 2830, "df_sp_floor_100": 3285, "spf_hf_uplift_160": 2430, "spf_hf_floor_100": 2525},
+            {"model": "HUS46", "joist_fasteners": "(4) SD10212", "face_fasteners": "(4) SD10212", "df_sp_uplift_160": 1465, "df_sp_floor_100": 1315, "spf_hf_uplift_160": 1260, "spf_hf_floor_100": 1010},
+            {"model": "HUS48", "joist_fasteners": "(6) SD10212", "face_fasteners": "(6) SD10212", "df_sp_uplift_160": 1950, "df_sp_floor_100": 1970, "spf_hf_uplift_160": 1680, "spf_hf_floor_100": 1515},
+            {"model": "HUS410", "joist_fasteners": "(8) SD10212", "face_fasteners": "(8) SD10212", "df_sp_uplift_160": 2440, "df_sp_floor_100": 2625, "spf_hf_uplift_160": 2095, "spf_hf_floor_100": 2020},
+            {"model": "HUS412", "joist_fasteners": "(10) SD10212", "face_fasteners": "(10) SD10212", "df_sp_uplift_160": 2830, "df_sp_floor_100": 3285, "spf_hf_uplift_160": 2430, "spf_hf_floor_100": 2525}
+          ]
+        },
+        "gap_loads_technical_bulletin": "T-C-HANGERGAP22 (updated T-C-HANGERGAP24)",
+        "gap_notes": {
+          "max_gap_for_full_load": "1/8 inch",
+          "max_gap_with_reduced_load": "3/8 inch (use Table in tech bulletin for reduction factors)",
+          "htv_option_for_gap_to_half_inch": "HTU series hangers rated for up to 1/2-inch gap"
+        }
+      },
+
+      "HHUS_HGUS": {
+        "full_name": "HHUS/HGUS Heavy Hangers - Sloped/Skewed Variations",
+        "description": "Heavy-duty hangers with skewable and/or slopeable seat; HHUS can skew AND slope, HGUS skews only",
+        "material": "14 gauge",
+        "skew_adjustment": {
+          "HHUS_skew_only": "Max 45° skew; load = 0.85 of table load",
+          "HHUS_slope_only_or_sloped_and_skewed": "Max 45°; download = 0.65 of table load; uplift = 0.72 of table load, max 2475 lb",
+          "HGUS_skew_only": "Max 45° skew; load reduction per table"
+        },
+        "representative_models": ["HHUS26-2", "HHUS28-2", "HHUS210-2", "HHUS26-3", "HGUS26-2", "HGUS28-2", "HGUS210-2", "HGUS26-3", "HGUS28-3", "HGUS210-3"]
+      },
+
+      "GLT_GLB": {
+        "full_name": "GLT/GLS/GLB - Glulam and Engineered Lumber Hangers",
+        "description": "Hangers designed for glulam beams and engineered lumber with higher load capacity",
+        "catalog_pages": "C-C-2024 pages referenced in product index",
+        "note": "GLB is a Beam Seat connector for masonry applications (ESR-2877)"
+      }
+    },
+
+    "hurricane_ties": {
+      "description": "Ties connecting rafters/trusses to wall plates to resist wind uplift and lateral forces",
+      "esr_reports": ["ESR-2502", "ESR-2559"],
+      "source_url": "https://www.strongtie.com/seismicandhurricaneties_strapsandties/h1a_htie/p/h1a",
+
+      "H1A": {
+        "full_name": "H1A Hurricane Tie (replaces H1)",
+        "description": "Next-generation U-shaped hurricane tie for nominal 2x lumber; connects rafter/truss to wall plate; installs on both sides for high lateral resistance",
+        "year_introduced": 2023,
+        "material": "18 gauge",
+        "finish": "G90 Galvanized (H1A) or ZMAX (H1AZ)",
+        "application": "Rafter/truss-to-top-plate connection for wind and seismic resistance",
+        "installation_notes": [
+          "Hurricane ties do not replace solid blocking",
+          "Can be installed inside or outside wall",
+          "Flanges can face inward or outward",
+          "Do not fasten through truss plates from behind"
+        ],
+        "fasteners": {
+          "nails": "(4) 0.131 x 1-1/2\" to rafter/truss and (4) 0.131 x 1-1/2\" to plates",
+          "sd_screws": "(4) SD9112 to rafter/truss, (4) SD9112 to plates"
+        },
+        "allowable_loads_lbs": {
+          "with_nails": {
+            "df_sp_uplift_160": 545,
+            "df_sp_lateral_F1_160": 420,
+            "df_sp_lateral_F2_160": 265,
+            "spf_hf_uplift_160": 470,
+            "spf_hf_lateral_F1_160": 360,
+            "spf_hf_lateral_F2_160": 205
+          },
+          "with_sd_screws": {
+            "df_sp_uplift_160": 655,
+            "df_sp_lateral_F1_160": 550,
+            "df_sp_lateral_F2_160": 300,
+            "spf_hf_uplift_160": 565,
+            "spf_hf_lateral_F1_160": 475,
+            "spf_hf_lateral_F2_160": 300
+          }
+        }
+      },
+
+      "H2_5A": {
+        "full_name": "H2.5A Hurricane Tie (Single-Sided)",
+        "description": "Single-sided hurricane tie for moderate loads; symmetrical design eliminates right/left parts; embossments in bend line strengthen connection",
+        "material": "18 gauge",
+        "finish": "G90 Galvanized (H2.5A), ZMAX (H2.5AZ), Stainless (H2.5ASS)",
+        "application": "Rafter/truss-to-top-plate; stud-to-bottom-plate (reduced load)",
+        "fasteners": "(5) 0.131 x 1-1/2\" nails to rafter, (5) 0.131 x 1-1/2\" nails to plates",
+        "allowable_loads_lbs": {
+          "df_sp_uplift_160": 565,
+          "df_sp_lateral_F1_160": 245,
+          "df_sp_lateral_F2_160": 105,
+          "spf_hf_uplift_160": 490,
+          "note": "Stud-to-bottom-plate DF/SP uplift = 390 lb"
+        }
+      },
+
+      "H10": {
+        "full_name": "H10 Hurricane Tie",
+        "description": "Higher-capacity single-sided hurricane tie; installed on top chord of truss to wall plate",
+        "material": "18 gauge",
+        "finish": "G90 Galvanized",
+        "note": "H10A = previous version (1040 lb DF/SP uplift); current H10 is updated version"
+      },
+
+      "other_hurricane_ties": {
+        "H4": {"description": "4x lumber hurricane tie", "df_sp_uplift_lbs": 680},
+        "H8": {"description": "8-nail hurricane tie for high-uplift applications", "df_sp_uplift_lbs": 625},
+        "HM": {"description": "Hurricane tie for metal plate connected trusses", "catalog_page": "C-C-2024 pp. 262-263"},
+        "HS": {"description": "Hurricane strap with longer legs", "catalog_page": "C-C-2024 p. 290"},
+        "H1_81Z": {"description": "Hurricane tie for 1-3/4\" wide engineered lumber", "finish": "ZMAX only"}
+      }
+    },
+
+    "straps_and_ties": {
+      "description": "Flat metal straps and ties for tension connections, floor-to-floor continuity, and shearwall restraint",
+      "source_urls": [
+        "https://www.strongtie.com/straightstraps_strapsandties/lsta_strap/p/lsta",
+        "https://www.strongtie.com/straightstraps_strapsandties/msta_strap/p/msta",
+        "https://www.strongtie.com/coiledstraps_specialtystraps/cmst_strap/p/cmst"
+      ],
+
+      "LSTA": {
+        "full_name": "LSTA Light Strap Tie",
+        "description": "Light-gauge precut strap for wind/seismic tension loads; staggered nail pattern minimizes splitting; floor-to-floor clear span",
+        "material": "20 gauge (LSTA9-24), 18 gauge (LSTA30-36)",
+        "finish": "G90 Galvanized",
+        "width_in": 1.25,
+        "application": "Tension loads in wood-to-wood; edge of 2x members",
+        "models": [
+          {"model": "LSTA9", "gauge": 20, "thickness_mil": 33, "length_in": 9},
+          {"model": "LSTA12", "gauge": 20, "thickness_mil": 33, "length_in": 12},
+          {"model": "LSTA15", "gauge": 20, "thickness_mil": 33, "length_in": 15},
+          {"model": "LSTA18", "gauge": 20, "thickness_mil": 33, "length_in": 18},
+          {"model": "LSTA21", "gauge": 20, "thickness_mil": 33, "length_in": 21},
+          {"model": "LSTA24", "gauge": 20, "thickness_mil": 33, "length_in": 24},
+          {"model": "LSTA30", "gauge": 18, "thickness_mil": 43, "length_in": 30},
+          {"model": "LSTA36", "gauge": 18, "thickness_mil": 43, "length_in": 36}
+        ],
+        "allowable_loads_with_sd_screws_lbs_160": {
+          "note": "SD9112 = #9 x 1-1/2\" SD connector screw",
+          "LSTA9":  {"total_screws": 8,  "df_sp": 1095, "spf_hf": 715},
+          "LSTA12": {"total_screws": 10, "df_sp": 1235, "spf_hf": 895},
+          "LSTA15": {"total_screws": 12, "df_sp": 1235, "spf_hf": 1075},
+          "LSTA18": {"total_screws": 14, "df_sp": 1235, "spf_hf": 1235},
+          "LSTA21": {"total_screws": 14, "df_sp": 1235, "spf_hf": 1215},
+          "LSTA24": {"total_screws": 14, "df_sp": 1235, "spf_hf": 1235},
+          "LSTA30": {"total_screws": 14, "df_sp": 1640, "spf_hf": 1255},
+          "LSTA36": {"total_screws": 14, "df_sp": 1415, "spf_hf": 1255}
+        }
+      },
+
+      "MSTA": {
+        "full_name": "MSTA Medium Strap Tie",
+        "description": "Medium-gauge precut strap for higher tension loads; staggered nail pattern; floor-to-floor clear span",
+        "material": "18 gauge (MSTA9-24), 16 gauge (MSTA30-49)",
+        "finish": "G90 Galvanized; ZMAX (Z suffix); Stainless Steel (SS suffix)",
+        "width_in": 1.25,
+        "models": [
+          {"model": "MSTA9",  "gauge": 18, "thickness_mil": 43, "length_in": 9},
+          {"model": "MSTA12", "gauge": 18, "thickness_mil": 43, "length_in": 12},
+          {"model": "MSTA15", "gauge": 18, "thickness_mil": 43, "length_in": 15},
+          {"model": "MSTA18", "gauge": 18, "thickness_mil": 43, "length_in": 18},
+          {"model": "MSTA21", "gauge": 18, "thickness_mil": 43, "length_in": 21},
+          {"model": "MSTA24", "gauge": 18, "thickness_mil": 43, "length_in": 24},
+          {"model": "MSTA30", "gauge": 16, "thickness_mil": 54, "length_in": 30},
+          {"model": "MSTA36", "gauge": 16, "thickness_mil": 54, "length_in": 36},
+          {"model": "MSTA49", "gauge": 16, "thickness_mil": 54, "length_in": 49}
+        ],
+        "allowable_loads_with_sd_screws_lbs_160": {
+          "MSTA9":  {"total_screws": 8,  "df_sp": 1095, "spf_hf": 715},
+          "MSTA12": {"total_screws": 10, "df_sp": 1370, "spf_hf": 895},
+          "MSTA15": {"total_screws": 12, "df_sp": 1640, "spf_hf": 1075},
+          "MSTA18": {"total_screws": 14, "df_sp": 1640, "spf_hf": 1255},
+          "MSTA21": {"total_screws": 14, "df_sp": 1640, "spf_hf": 1255},
+          "MSTA24": {"total_screws": 14, "df_sp": 1640, "spf_hf": 1255},
+          "MSTA30": {"total_screws": 16, "df_sp": 2050, "spf_hf": 1435},
+          "MSTA36": {"total_screws": 16, "df_sp": 1970, "spf_hf": 1435},
+          "MSTA49": {"total_screws": 16, "df_sp": 2050, "spf_hf": 1435}
+        }
+      },
+
+      "CMST": {
+        "full_name": "CMST Coiled Medium Strap Tie",
+        "description": "Continuous coiled strap cut to length on jobsite; resists tension and uplift loads; double 2x stud or post application; ideal for roof uplift and shearwall overturning",
+        "material": "12 gauge (CMST12), 14 gauge (CMST14), 16 gauge (CMSTC16)",
+        "finish": "G90 Galvanized",
+        "models": [
+          {"model": "CMST12",   "gauge": 12, "coil_length_ft": 40},
+          {"model": "CMST14",   "gauge": 14, "coil_length_ft": 52.5},
+          {"model": "CMSTC16",  "gauge": 16, "coil_length_ft": 54, "note": "C = countersunk nail slots for lower profile"}
+        ],
+        "installation_notes": [
+          "Cut length = 2x End Length + clear span dimension",
+          "Use only every other round hole if wood tends to split",
+          "Lap splicing allowed per table; 0.148x2.5 nails only in splice",
+          "CMSTC uses 0.148x3-1/4 sinker nails"
+        ]
+      },
+
+      "CS": {
+        "full_name": "CS Coiled Strap",
+        "description": "Light coiled strap for general tension applications",
+        "catalog_pages": "C-C-2024 pp. 283-285, 291-292"
+      },
+
+      "MSTI": {
+        "full_name": "MSTI Medium Strap Tie (Interior)",
+        "description": "Interior medium strap tie; catalog pages C-C-2024 pp. 278-279"
+      },
+
+      "MST": {
+        "full_name": "MST Medium Strap",
+        "description": "General medium strap tie for wood-to-wood connections"
+      }
+    },
+
+    "post_bases": {
+      "description": "Connectors attaching wood posts to concrete foundations with uplift resistance and 1-inch standoff",
+      "source_url": "https://www.buildsite.com/pdf/simpsonstrongtie/ABAABUABW-Adjustable-and-Standoff-Post-Bases-Product-Data-2248845.pdf",
+      "catalog_pages": "C-C-2024 pp. 70-71",
+
+      "ABU": {
+        "full_name": "ABU Adjustable Post Base with Uplift (High Capacity)",
+        "description": "High-capacity adjustable post base; 1-inch standoff; slotted anchor hole for adjustability; nails, SD screws or bolts",
+        "material": "14 gauge base, 12 gauge strap",
+        "finish": "ZMAX (required; Z suffix standard)",
+        "application": "4x, 6x, 8x, 10x, 12x posts to existing concrete",
+        "installation_notes": [
+          "1-inch standoff meets code for posts in basements or weather-exposed",
+          "Slotted base for post placement adjustment around anchor bolt",
+          "Post bases not recommended for non-top-supported installations",
+          "ABU88Z/1010Z/1212Z: may use SDS screws for same table load"
+        ],
+        "models_post_installation": [
+          {"model": "ABU44Z",   "post_size": "4x4",   "gauge_base": 16, "gauge_strap": 16, "w_in": 3.5625, "l_in": 3.375, "h_in": 3.0625, "anchor_dia_in": 0.5,  "nails": "(6) 0.148x3",      "df_sp_uplift_lbs": 1900,  "df_sp_download_lbs": 5925},
+          {"model": "ABU44RZ",  "post_size": "Rough 4x4", "gauge_base": 16, "gauge_strap": 12, "anchor_dia_in": 0.5, "nails": "(8) 0.148x3", "df_sp_uplift_lbs": 835, "df_sp_download_lbs": 7180},
+          {"model": "ABU46Z",   "post_size": "4x6",   "gauge_base": 12, "gauge_strap": 12, "w_in": 3.5625, "l_in": 5.0,  "h_in": 7.0,    "anchor_dia_in": 0.625, "nails": "(12) 0.162x3.5",  "df_sp_uplift_lbs": 2155,  "df_sp_download_lbs": 9890},
+          {"model": "ABA66Z",   "post_size": "6x6",   "gauge_base": 14, "gauge_strap": 14, "w_in": 5.5,  "l_in": 5.375,"h_in": 3.125, "anchor_dia_in": 0.625, "nails": "(8) 0.162x3.5",  "df_sp_uplift_lbs": 920,   "df_sp_download_lbs": 11415},
+          {"model": "ABU66Z",   "post_size": "6x6",   "gauge_base": 12, "gauge_strap": 10, "w_in": 5.5,  "l_in": 5.0,  "h_in": 6.0625, "anchor_dia_in": 0.625, "nails": "(12) 0.162x3.5", "df_sp_uplift_lbs": 2475,  "df_sp_download_lbs": 18205},
+          {"model": "ABU88Z",   "post_size": "8x8",   "gauge_base": 14, "gauge_strap": 12, "w_in": 7.5,  "l_in": 7.0,  "h_in": 7.0,    "anchor_dia_in": "2x 5/8", "nails": "(18) 0.162x3.5","df_sp_uplift_lbs": 4120,  "df_sp_download_lbs": 22405},
+          {"model": "ABU1010Z", "post_size": "10x10",  "gauge_base": 14, "gauge_strap": 12, "w_in": 9.5,  "l_in": 9.0,  "h_in": 7.25,   "anchor_dia_in": "2x 5/8", "nails": "(22) 0.162x3.5","df_sp_uplift_lbs": 2270,  "df_sp_download_lbs": 32020},
+          {"model": "ABU1212Z", "post_size": "12x12",  "gauge_base": 12, "gauge_strap": 12, "w_in": 11.5, "l_in": 11.0, "h_in": 7.25,   "anchor_dia_in": "2x 5/8", "nails": "(22) 0.162x3.5","df_sp_uplift_lbs": 3000,  "df_sp_download_lbs": null, "note": "see catalog"}
+        ]
+      },
+
+      "ABA": {
+        "full_name": "ABA Adjustable Post Base (Standard Capacity)",
+        "description": "Standard-capacity adjustable post base; 1-inch standoff; nails or SD screws (no bolts)",
+        "finish": "ZMAX",
+        "models": [
+          {"model": "ABA44Z", "post_size": "4x4", "anchor_dia_in": 0.5, "nails": "(6) 0.148x3", "df_sp_download_lbs": 5925},
+          {"model": "ABA66Z", "post_size": "6x6", "anchor_dia_in": 0.625, "nails": "(8) 0.162x3.5", "df_sp_download_lbs": 11415}
+        ]
+      },
+
+      "ABW": {
+        "full_name": "ABW Adjustable Post Base with Wind Uplift (Medium Capacity)",
+        "description": "Medium-capacity adjustable post base; three-sided nailing before bending fourth flange",
+        "finish": "ZMAX",
+        "models": [
+          {"model": "ABW46Z",   "post_size": "4x6",   "anchor_dia_in": 0.5,   "nails": "(10) 0.148x3", "df_sp_download_lbs": 4590},
+          {"model": "ABW66Z",   "post_size": "6x6",   "anchor_dia_in": 0.5,   "nails": "(12) 0.148x3", "df_sp_download_lbs": 12935}
+        ]
+      },
+
+      "CBS_CBSQ": {
+        "full_name": "CBS/CBSQ Column Base (Being replaced by CBST/CBSTQ)",
+        "description": "Column base for 4x4, 4x6, 6x6 posts; concealed design; superseded by CBST series per engineering letter L-C-CBSTQZ26",
+        "note": "As of 2026, CBST and CBSTQ replace CBS and CBSQ series",
+        "catalog_pages": "C-C-2024 pp. 78-79"
+      },
+
+      "CB": {
+        "full_name": "CB Column Base",
+        "description": "Adjustable column base for wood posts on concrete; includes various post sizes",
+        "catalog_pages": "C-C-2024 pp. 80-81",
+        "seismic_loads": {
+          "sdc_a_b": "Wind and SDC A&B loads apply",
+          "sdc_c_f": "Separate SDC C-F loads (cracked/uncracked concrete)"
+        }
+      },
+
+      "EPB": {
+        "full_name": "EPB Elevated Post Base",
+        "description": "Post base with elevated standoff for posts on concrete; catalog page C-C-2024 p. 74"
+      }
+    },
+
+    "post_caps": {
+      "description": "Post caps connecting beams to tops of posts with uplift and lateral resistance",
+      "catalog_pages": "C-C-2024 pp. 87-97",
+
+      "BC": {
+        "full_name": "BC Post Cap (Light-Duty)",
+        "description": "Light-duty 18-gauge post cap connecting beam to post; provides uplift and lateral resistance; opposing flanges increase lateral resistance",
+        "material": "18 gauge",
+        "finish": "G90 Galvanized",
+        "fasteners": "0.162x3-1/2\" or 0.162x2-1/2\" nails; SD screws approved",
+        "models": [
+          {"model": "BC4",  "post_size": "4x4",  "df_sp_uplift_lbs": 605,  "df_sp_lateral_lbs": 1000},
+          {"model": "BC6",  "post_size": "6x6",  "df_sp_uplift_lbs": 1185, "df_sp_lateral_lbs": 1825},
+          {"model": "BC8",  "post_size": "8x8",  "note": "see catalog"},
+          {"model": "BC4Z", "post_size": "4x4",  "finish": "ZMAX", "df_sp_uplift_lbs": 605, "df_sp_lateral_lbs": 1000},
+          {"model": "BC6Z", "post_size": "6x6",  "finish": "ZMAX", "df_sp_uplift_lbs": 1185}
+        ],
+        "note": "BC4 uplift reduced from 980 lb to 605 lb after 2019 ASTM D7147 update"
+      },
+
+      "AC": {
+        "full_name": "AC Post Cap (Adjustable)",
+        "description": "Adjustable post cap; catalog pages C-C-2024 pp. 88-89"
+      },
+
+      "CC_CCQ": {
+        "full_name": "CC/CCQ Column Cap (Heavy)",
+        "description": "Heavy-duty column caps for larger posts and beams; catalog pp. 94-97",
+        "lateral_loads": {
+          "CCQ3-4_with_SDS": {"sds_beam": 16, "sds_post": 14, "df_sp_lateral_lbs_160": 3300},
+          "ECCQ3-4_with_SDS": {"sds_beam": 14, "sds_post": 14, "df_sp_lateral_lbs_160": 2495}
+        },
+        "note": "CCQ/ECCQ lateral loads require beam to be laterally supported by other means"
+      },
+
+      "ACHZ": {
+        "full_name": "ACHZ Heavy Adjustable Post Cap",
+        "description": "New in C-C-2024; medium- to high-capacity post cap filling gap between light-duty BC and heavy-duty CCQ",
+        "catalog_pages": "C-C-2024 pp. 88-89"
+      },
+
+      "LPC_LPCZ": {
+        "description": "Light post cap; catalog references",
+        "finish": "ZMAX standard"
+      }
+    },
+
+    "angles_and_plates": {
+      "description": "Framing angles, gusset angles, and lateral tie plates for general wood framing connections",
+      "source_url": "https://www.strongtie.com/framinganglesandplates_anglesandplates/a35_angle/p/a35",
+      "catalog_pages": "C-C-2024 pp. 297-302",
+
+      "A35": {
+        "full_name": "A35 Framing Angle",
+        "description": "Balanced, completely reversible framing angle with exclusive bend slot for instant field bends; speed prong for temporary hold; 18 gauge",
+        "material": "18 gauge",
+        "finish": "G90 Galvanized; ZMAX (A35Z); Stainless (A35SS)",
+        "dimensions": {"W1_in": 1.4375, "W2_in": 1.4375, "L_in": 4.5},
+        "fasteners": "(9) or (12) 0.131x1-1/2\" nails (depending on connection type); SD9112 screws approved",
+        "allowable_loads_lbs": {
+          "nails_9": {
+            "A1_F1_direction_df_sp_floor": 295, "A1_F1_direction_df_sp_160": 350,
+            "E_direction_df_sp_floor": 295,
+            "C1_direction_df_sp_floor": 185
+          },
+          "nails_12": {
+            "A2_direction_df_sp_floor": 295,
+            "C2_direction_df_sp_floor": 295,
+            "D_direction_df_sp_floor": 225,
+            "F1_direction_df_sp_floor": 590, "F1_direction_df_sp_160": 650,
+            "F2_direction_df_sp_floor": 590, "F2_direction_df_sp_160": 670
+          },
+          "sd_screws_12": {
+            "F1_direction_df_sp_floor": 695, "F1_direction_df_sp_160": 695,
+            "F2_direction_df_sp_floor": 845, "F2_direction_df_sp_160": 845
+          }
+        },
+        "code_compliance": ["IBC", "Florida Building Code", "Los Angeles Building Code"],
+        "special_notes": [
+          "One bend only allowed",
+          "Can be used over 1/2\" wood structural panel sheathing with 0.131x1-1/2 nails, no load reduction",
+          "When installed on each side of joist, minimum joist thickness = 3\"",
+          "A35SS stainless loads may be lower than carbon steel—use SCNR ring-shank nails to match"
+        ]
+      },
+
+      "A34": {
+        "full_name": "A34 Framing Angle",
+        "description": "Similar to A35 but not reversible; speed prong for temporary hold; 18 gauge",
+        "material": "18 gauge",
+        "allowable_loads_lbs": {
+          "8_nails_F1_df_sp_floor": 510, "8_nails_F2_df_sp_floor": 495, "8_nails_uplift_df_sp": 240
+        }
+      },
+
+      "A_series_general": {
+        "description": "A-series includes many angle sizes (A21, A22, A23, A24, A25, A26, A34, A35, A66, A6, A66Z)",
+        "catalog_pages": "C-C-2024 p. 302",
+        "common_gauges": [18, 14, 12],
+        "finish": "G90 Galvanized standard"
+      },
+
+      "LTP4_LTP5": {
+        "full_name": "LTP4/LTP5 Lateral Tie Plate",
+        "description": "Transfers shear forces for top plate-to-rim board or blocking connections; embossments enhance performance",
+        "material": "20 gauge (LTP4/LTP5)",
+        "allowable_loads_lbs": {
+          "LTP4_G_direction_df_sp_floor": 580, "LTP4_G_direction_df_sp_160": 715,
+          "LTP4_H_direction_df_sp_floor": 525,
+          "LTP5_G_direction_df_sp_floor": 565,
+          "LTP5_H_direction_df_sp_floor": 490
+        },
+        "irc_note": "LTP4 satisfies IRC R602.10.6.4 continuously sheathed portal frame framing anchor requirements"
+      },
+
+      "HL": {
+        "description": "Heavy angle and gusset; catalog p. 303",
+        "finish": "G90 Galvanized"
+      },
+
+      "GA": {
+        "description": "Gusset angle; catalog p. 301"
+      },
+
+      "L_angles": {
+        "description": "L-series reinforcing and skewable angles (L50, L70, L90 etc.); catalog p. 301",
+        "note": "L50, L70, L90 refer to angle leg dimensions in mm in some international catalogs; US catalog uses inch dimensions"
+      }
+    },
+
+    "holdowns": {
+      "description": "Holdowns anchor shearwall posts to concrete foundations resisting overturning forces",
+      "esr_reports": ["ESR-2330"],
+      "catalog_pages": "C-C-2024 pp. 56-65",
+      "code_references": {
+        "IBC": "Sections 2304.10.4, 2305.1, 2305.3, 2308.10.5.1, 2308.10.5.2",
+        "IRC": "Sections R602.10.6.1, R602.10.6.2, R602.10.6.5, R602.10.7",
+        "SDPWS": "Section 4.3.6.4.2"
+      },
+
+      "HDU": {
+        "full_name": "HDU Holdown (SDS Screw Type)",
+        "description": "Screw holdown for shearwalls and braced-wall panels; SDS screws supplied with holdown; predeflected seat; no stud bolts needed",
+        "note": "HDU series being discontinued and replaced by HDUE series (per L-C-HDUECONV25, 2025)",
+        "material": {
+          "HDU2_HDU5": "14 gauge",
+          "HDU8_HDU11": "10 gauge",
+          "HDU14": "7 gauge"
+        },
+        "finish": "G90 Galvanized; HDG available",
+        "fasteners": "1/4\" x 2-1/2\" SDS Heavy-Duty Connector screws (supplied with holdown)",
+        "anchor_bolt_diameter": {
+          "HDU2_HDU5": "5/8\"",
+          "HDU8": "3/4\"",
+          "HDU11": "1\"",
+          "HDU14": "1\" with heavy-hex anchor nut (supplied)"
+        },
+        "models": [
+          {"model": "HDU2-SDS2.5",  "gauge": 14, "w_in": 3.0, "h_in": 8.6875,  "b_in": 3.25, "cl_in": 1.3125, "so_in": 1.375, "sds_screws_included": 6,  "finish": "G90"},
+          {"model": "HDU4-SDS2.5",  "gauge": 14, "w_in": 3.0, "h_in": 10.9375, "b_in": 3.25, "cl_in": 1.3125, "so_in": 1.375, "sds_screws_included": 10, "finish": "G90"},
+          {"model": "HDU5-SDS2.5",  "gauge": 14, "w_in": 3.0, "h_in": 13.1875, "b_in": 3.25, "cl_in": 1.3125, "so_in": 1.375, "sds_screws_included": 14, "finish": "G90"},
+          {"model": "HDU8-SDS2.5",  "gauge": 10, "w_in": 3.0, "h_in": 16.625,  "b_in": 3.5,  "cl_in": 1.375,  "so_in": 1.5,   "sds_screws_included": 20, "finish": "G90"},
+          {"model": "HDU11-SDS2.5", "gauge": 10, "w_in": 3.0, "h_in": 22.25,   "b_in": 3.5,  "cl_in": 1.375,  "so_in": 1.5,   "sds_screws_included": 30, "finish": "G90"},
+          {"model": "HDU14-SDS2.5", "gauge": 7,  "w_in": 3.0, "h_in": 25.6875, "b_in": 3.5,  "cl_in": 1.5625, "so_in": 1.5625,"sds_screws_included": 36, "finish": "G90", "special": "heavy-hex nut required"}
+        ],
+        "allowable_tension_loads_per_esr2330": {
+          "note": "Assembly loads include bolt, screws, and holdown. See ESR-2330 Table 1B for full table.",
+          "HDU2": {"df_sp_anchor_5_8_lbs": 2235, "spf_hf_lbs": 1770},
+          "HDU4": {"df_sp_anchor_5_8_lbs": 3525, "spf_hf_lbs": 2875},
+          "HDU5": {"df_sp_anchor_5_8_lbs": 4565, "spf_hf_lbs": 3840},
+          "HDU8": {"df_sp_anchor_3_4_lbs": 7070, "spf_hf_lbs": 5935},
+          "HDU11":{"df_sp_anchor_1in_lbs": 9800, "spf_hf_lbs": 7545},
+          "HDU14":{"df_sp_anchor_1in_lbs": 14390, "spf_hf_lbs": 11495, "note": "heavy-hex nut: 14445 lb"}
+        },
+        "displacement_at_max_load_in": {
+          "HDU2": 0.059,
+          "HDU4": 0.073,
+          "HDU5": 0.079,
+          "HDU8": 0.101,
+          "HDU11": 0.172,
+          "HDU14": 0.239
+        }
+      },
+
+      "HDUE": {
+        "full_name": "HDUE Holdown (Enhanced/Replacement for HDU)",
+        "description": "New higher-capacity holdown replacing HDU series; models HDUE3 through HDUE17; listed in ESR-2330",
+        "note": "Released 2025; replaces HDU series. See engineering letter L-C-HDUECONV25.",
+        "esr_report": "ESR-2330"
+      },
+
+      "HHDQ": {
+        "full_name": "HHDQ Heavy Holdown Quick-Install",
+        "description": "Extra-high load holdown; direct sill plate installation; suitable for back-to-back applications; SDS screws supplied",
+        "material": "7 gauge body; 1/2\" plate washer",
+        "finish": "Simpson Strong-Tie gray paint; HHDQ11 available in stainless steel",
+        "anchor_bolt_diameter": {
+          "HHDQ11": "7/8\"",
+          "HHDQ14": "7/8\" with heavy-hex anchor nut (supplied)"
+        },
+        "models": [
+          {"model": "HHDQ11-SDS2.5", "w_in": 3.0, "h_in": 15.125, "b_in": 3.5,  "anchor_dia": "7/8\"", "sds_screws": 24},
+          {"model": "HHDQ14-SDS2.5", "w_in": 3.0, "h_in": 18.75,  "b_in": 3.5,  "anchor_dia": "7/8\"", "sds_screws": 30, "special": "heavy-hex nut required"}
+        ],
+        "allowable_tension_loads_lbs_per_esr2330": {
+          "HHDQ11": {"df_sp_lbs": 11810, "spf_hf_lbs": 8425},
+          "HHDQ14": {"df_sp_lbs": 13710, "spf_hf_lbs": 10530}
+        },
+        "compression_note": "HHDQ installed horizontally achieves compression loads with standard nut on underside of load transfer plate"
+      },
+
+      "HDQ8": {
+        "full_name": "HDQ8 High-Deflection Holdown",
+        "description": "Unique seat design minimizes deflection; very high load capacity; SDS screws installed",
+        "material": "7 gauge with 3/8\" steel crossbars",
+        "catalog_pages": "C-C-2024 pp. 56-65"
+      },
+
+      "STHD": {
+        "full_name": "STHD Strap Tie Holdown",
+        "description": "Strap-style holdown for retrofit applications and where minimum post width is required",
+        "catalog_pages": "C-C-2024 pp. 60-62"
+      },
+
+      "PHD": {
+        "full_name": "PHD Plate Holdown",
+        "description": "Plate holdown for shearwall applications; uses standard anchor bolts; per ESR-2330",
+        "esr_report": "ESR-2330"
+      },
+
+      "DTT2": {
+        "full_name": "DTT2Z Deck Tension Tie (Holdown)",
+        "description": "Deck tension tie and holdown connection for deck ledger-to-house lateral connections; per ESR-2330",
+        "esr_report": "ESR-2330",
+        "catalog_pages": "C-C-2024 pp. 54-55, 314-315",
+        "max_anchor_rod_unbraced": "4.5 inches (vs 6 inches for HDU)"
+      }
+    },
+
+    "anchors_and_bolts": {
+      "description": "Cast-in-place anchor bolts for holdowns, shearwalls, and post bases",
+      "source_url": "https://www.strongtie.com/bolts_anchorbolts/sstb_bolt/p/sstb",
+
+      "SSTB": {
+        "full_name": "SSTB Anchor Bolt",
+        "description": "Proprietary cast-in-place anchor bolt optimized for holdowns and Strong-Wall shearwalls; offset S-bend provides mechanical interlock with concrete; first ICC-ES proprietary anchor bolt per AC 399",
+        "material": "ASTM F-1554, Grade 36 (36 ksi yield)",
+        "finish": "None standard; HDG available",
+        "esr_report": "ESR-2611",
+        "code_compliance": ["2006-2024 IBC", "2006-2024 IRC", "City of Los Angeles", "Florida Building Code"],
+        "installation_notes": [
+          "Suitable for monolithic and two-pour (4\" slab) concrete",
+          "Minimum concrete compressive strength: 2,500 psi",
+          "Install before concrete pour using AnchorMate holders (ABL/ABS)",
+          "Stamped embedment line aids installation at correct depth",
+          "For HDG models: chase threads or use overtapped nuts (NUT5/8-OST, etc.)",
+          "Two-pour loads: SSTB20→use SSTB16 loads; SSTB24→SSTB20 loads; SSTB34/36→SSTB28 loads",
+          "CMU: requires horizontal #4 rebar in second course + vertical #4 rebar in adjacent cell"
+        ],
+        "seismic_design_categories": {
+          "sdc_a_b": "Wind and SDC A&B loads",
+          "sdc_c": "Per IBC 1613, detached 1-2 story dwellings in SDC C may use Wind/SDC A&B loads",
+          "sdc_c_f": "Separate SDC C-F loads (lower); see tables"
+        },
+        "models": [
+          {"model": "SSTB16",  "dia_in": 0.625, "length_in": 17.625, "embed_le_in": 12.625, "thread_len_in": 3.5},
+          {"model": "SSTB16L", "dia_in": 0.625, "length_in": 19.625, "embed_le_in": 12.625, "thread_len_in": 5.5, "note": "longer thread"},
+          {"model": "SSTB20",  "dia_in": 0.625, "length_in": 21.875, "embed_le_in": 16.875, "thread_len_in": 3.5},
+          {"model": "SSTB24",  "dia_in": 0.625, "length_in": 25.875, "embed_le_in": 20.875, "thread_len_in": 3.5},
+          {"model": "SSTB28",  "dia_in": 0.875, "length_in": 29.875, "embed_le_in": 24.875, "thread_len_in": 4.0},
+          {"model": "SSTB34",  "dia_in": 0.875, "length_in": 35.875, "embed_le_in": 31.0,   "thread_len_in": 4.5},
+          {"model": "SSTB36",  "dia_in": 0.875, "length_in": 37.875, "embed_le_in": 31.0,   "thread_len_in": 6.5}
+        ],
+        "allowable_tension_loads_stemwall_lbs": {
+          "note": "Loads are ASD. For LRFD: seismic x1.43, wind x1.67. Midwall = 1.5le from end.",
+          "SSTB16": {"wind_sdc_ab_midwall": 4830, "wind_sdc_ab_corner": 3940, "sdc_cf_midwall": 3870, "sdc_cf_corner": 3170},
+          "SSTB20": {"wind_sdc_ab_midwall": 7160, "wind_sdc_ab_corner": 5695, "sdc_cf_midwall": 5755, "sdc_cf_corner": 4575},
+          "SSTB24": {"wind_sdc_ab_midwall": 8970, "wind_sdc_ab_corner": 7130, "sdc_cf_midwall": 7190, "sdc_cf_corner": 5720},
+          "SSTB28": {"wind_sdc_ab_midwall": 9900, "wind_sdc_ab_corner": 8710, "sdc_cf_midwall": 8315, "sdc_cf_corner": 7315},
+          "SSTB34_SSTB36": {"wind_sdc_ab_midwall": 9900, "sdc_cf_midwall": 8315, "note": "3-7/8 end distance: 6330 lb W/SDC-AB, 5550 SDC-CF"}
+        }
+      },
+
+      "SB": {
+        "full_name": "SB Anchor Bolt",
+        "description": "Proprietary anchor bolt with mechanical end bearing plate; companion to SSTB in ESR-2611",
+        "esr_report": "ESR-2611"
+      },
+
+      "DTT1Z_DTT2Z": {
+        "full_name": "DTT Deck Tension Tie",
+        "description": "Deck tension tie resisting lateral loads from deck to house structure; also used as holdown; ZMAX coated",
+        "catalog_pages": "C-C-2024 pp. 54-55, 314-315",
+        "esr_report": "ESR-2330",
+        "technical_bulletin": "T-C-DECKLAT24"
+      }
+    },
+
+    "shearwalls": {
+      "description": "Prefabricated shearwall panels for lateral force resistance in earthquakes and high winds",
+      "catalog": "Strong-Wall Shearwalls catalog C-L-SW24 (124 pages)",
+      "source_url": "https://www.strongtie.com/ssw_steelstrongwallshearwalls/ssw_shearwall/p/steel-strong-wall",
+
+      "SSW_Steel_Strong_Wall": {
+        "full_name": "Steel Strong-Wall Shearwall (SSW)",
+        "description": "Prefabricated steel panel shearwall with highest allowable loads; easy installation; preattached wood studs; code listed",
+        "material": "Vertical panel: 10 gauge steel",
+        "finish": "Vertical panel: galvanized; top/base plates: Simpson gray paint",
+        "includes": "Strong-Drive SDS screws, nuts, and installation instructions",
+        "applications": ["Concrete foundation - standard", "Garage portal systems", "Balloon framing", "Two-story stacked", "First-story wood floor systems", "Cold-formed steel on concrete"],
+        "anchor_bolts": {
+          "12-inch_width": {"qty": 2, "dia": "3/4\""},
+          "15_to_24_inch_width": {"qty": 2, "dia": "1\""}
+        },
+        "models": [
+          {"model": "SSW12X7",  "width_in": 12, "height_in": 80,    "thickness_in": 3.5, "anchor_bolts": 2, "bolt_dia_in": 0.75, "screws_top": 4},
+          {"model": "SSW15X7",  "width_in": 15, "height_in": 80,    "thickness_in": 3.5, "anchor_bolts": 2, "bolt_dia_in": 1.0,  "screws_top": 6},
+          {"model": "SSW18X7",  "width_in": 18, "height_in": 80,    "thickness_in": 3.5, "anchor_bolts": 2, "bolt_dia_in": 1.0,  "screws_top": 9},
+          {"model": "SSW21X7",  "width_in": 21, "height_in": 80,    "thickness_in": 3.5, "anchor_bolts": 2, "bolt_dia_in": 1.0,  "screws_top": 12},
+          {"model": "SSW24X7",  "width_in": 24, "height_in": 80,    "thickness_in": 3.5, "anchor_bolts": 2, "bolt_dia_in": 1.0,  "screws_top": 14},
+          {"model": "SSW12X7.4","width_in": 12, "height_in": 85.5,  "thickness_in": 3.5, "anchor_bolts": 2, "bolt_dia_in": 0.75, "screws_top": 4},
+          {"model": "SSW15X7.4","width_in": 15, "height_in": 85.5,  "thickness_in": 3.5, "anchor_bolts": 2, "bolt_dia_in": 1.0,  "screws_top": 6},
+          {"model": "SSW18X7.4","width_in": 18, "height_in": 85.5,  "thickness_in": 3.5, "anchor_bolts": 2, "bolt_dia_in": 1.0,  "screws_top": 9},
+          {"model": "SSW21X7.4","width_in": 21, "height_in": 85.5,  "thickness_in": 3.5, "anchor_bolts": 2, "bolt_dia_in": 1.0,  "screws_top": 12},
+          {"model": "SSW24X7.4","width_in": 24, "height_in": 85.5,  "thickness_in": 3.5, "anchor_bolts": 2, "bolt_dia_in": 1.0,  "screws_top": 14},
+          {"model": "SSW12X8",  "width_in": 12, "height_in": 93.25, "thickness_in": 3.5, "anchor_bolts": 2, "bolt_dia_in": 0.75, "screws_top": 4},
+          {"model": "SSW15X8",  "width_in": 15, "height_in": 93.25, "thickness_in": 3.5, "anchor_bolts": 2, "bolt_dia_in": 1.0,  "screws_top": 6},
+          {"model": "SSW18X8",  "width_in": 18, "height_in": 93.25, "thickness_in": 3.5, "anchor_bolts": 2, "bolt_dia_in": 1.0,  "screws_top": 9},
+          {"model": "SSW21X8",  "width_in": 21, "height_in": 93.25, "thickness_in": 3.5, "anchor_bolts": 2, "bolt_dia_in": 1.0,  "screws_top": 12},
+          {"model": "SSW24X8",  "width_in": 24, "height_in": 93.25, "thickness_in": 3.5, "anchor_bolts": 2, "bolt_dia_in": 1.0,  "screws_top": 14},
+          {"model": "SSW12X9",  "width_in": 12, "height_in": 105.25,"thickness_in": 3.5, "anchor_bolts": 2, "bolt_dia_in": 0.75, "screws_top": 4},
+          {"model": "SSW15X9",  "width_in": 15, "height_in": 105.25,"thickness_in": 3.5, "anchor_bolts": 2, "bolt_dia_in": 1.0,  "screws_top": 6},
+          {"model": "SSW18X9",  "width_in": 18, "height_in": 105.25,"thickness_in": 3.5, "anchor_bolts": 2, "bolt_dia_in": 1.0,  "screws_top": 9},
+          {"model": "SSW21X9",  "width_in": 21, "height_in": 105.25,"thickness_in": 3.5, "anchor_bolts": 2, "bolt_dia_in": 1.0,  "screws_top": 12},
+          {"model": "SSW24X9",  "width_in": 24, "height_in": 105.25,"thickness_in": 3.5, "anchor_bolts": 2, "bolt_dia_in": 1.0,  "screws_top": 14},
+          {"model": "SSW12X10", "width_in": 12, "height_in": 117.25,"thickness_in": 3.5, "anchor_bolts": 2, "bolt_dia_in": 0.75, "screws_top": 4},
+          {"model": "SSW15X10", "width_in": 15, "height_in": 117.25,"thickness_in": 3.5, "anchor_bolts": 2, "bolt_dia_in": 1.0,  "screws_top": 6},
+          {"model": "SSW18X10", "width_in": 18, "height_in": 117.25,"thickness_in": 3.5, "anchor_bolts": 2, "bolt_dia_in": 1.0,  "screws_top": 9},
+          {"model": "SSW21X10", "width_in": 21, "height_in": 117.25,"thickness_in": 3.5, "anchor_bolts": 2, "bolt_dia_in": 1.0,  "screws_top": 12},
+          {"model": "SSW24X10", "width_in": 24, "height_in": 117.25,"thickness_in": 3.5, "anchor_bolts": 2, "bolt_dia_in": 1.0,  "screws_top": 14},
+          {"model": "SSW15X11", "width_in": 15, "height_in": 129.25,"thickness_in": 5.5, "anchor_bolts": 2, "bolt_dia_in": 1.0,  "screws_top": 6},
+          {"model": "SSW18X11", "width_in": 18, "height_in": 129.25,"thickness_in": 5.5, "anchor_bolts": 2, "bolt_dia_in": 1.0,  "screws_top": 9},
+          {"model": "SSW21X11", "width_in": 21, "height_in": 129.25,"thickness_in": 5.5, "anchor_bolts": 2, "bolt_dia_in": 1.0,  "screws_top": 12},
+          {"model": "SSW24X11", "width_in": 24, "height_in": 129.25,"thickness_in": 5.5, "anchor_bolts": 2, "bolt_dia_in": 1.0,  "screws_top": 14},
+          {"model": "SSW15X12", "width_in": 15, "height_in": 141.25,"thickness_in": 5.5, "anchor_bolts": 2, "bolt_dia_in": 1.0,  "screws_top": 6},
+          {"model": "SSW18X12", "width_in": 18, "height_in": 141.25,"thickness_in": 5.5, "anchor_bolts": 2, "bolt_dia_in": 1.0,  "screws_top": 9},
+          {"model": "SSW21X12", "width_in": 21, "height_in": 141.25,"thickness_in": 5.5, "anchor_bolts": 2, "bolt_dia_in": 1.0,  "screws_top": 12},
+          {"model": "SSW24X12", "width_in": 24, "height_in": 141.25,"thickness_in": 5.5, "anchor_bolts": 2, "bolt_dia_in": 1.0,  "screws_top": 14},
+          {"model": "SSW18X13", "width_in": 18, "height_in": 153.25,"thickness_in": 5.5, "anchor_bolts": 2, "bolt_dia_in": 1.0,  "screws_top": 9},
+          {"model": "SSW21X13", "width_in": 21, "height_in": 153.25,"thickness_in": 5.5, "anchor_bolts": 2, "bolt_dia_in": 1.0,  "screws_top": 12},
+          {"model": "SSW24X13", "width_in": 24, "height_in": 153.25,"thickness_in": 5.5, "anchor_bolts": 2, "bolt_dia_in": 1.0,  "screws_top": 14}
+        ],
+        "naming_convention": "SSW[width_in]X[nominal_height_ft] — e.g. SSW18X8 = 18\" wide x 8 ft nominal",
+        "note": "For heights 11 ft and above, thickness is 5.5\" (uses 2x6 framing)"
+      },
+
+      "WSWH_Strong_Wall_Wood": {
+        "full_name": "WSWH Strong-Wall High-Strength Wood Shearwall",
+        "description": "Patented wood shearwall with highest allowable loads; field-trimmable; versatile for residential and commercial",
+        "catalog": "C-L-SW24",
+        "note": "Load tables in Strong-Wall Shearwalls catalog; not in C-C-2024"
+      },
+
+      "Strong_Rod_Systems": {
+        "full_name": "Strong-Rod Anchor Tiedown Systems",
+        "description": "Continuous rod tiedown system for shearwall overturning restraint and roof uplift restraint",
+        "catalog": "S-L-SRS25; Installer's Guide S-L-SRSINSTALL24"
+      }
+    },
+
+    "fasteners": {
+      "description": "Structural screws and nails for connector installations and wood-to-wood connections",
+      "catalogs": ["C-F-2025 Fastening Systems Catalog", "C-F-2025TECHSUP Fastening Systems Technical Guide"],
+
+      "SDS": {
+        "full_name": "Strong-Drive SDS Heavy-Duty Connector Screw",
+        "description": "1/4-inch diameter high-strength structural wood screw; no predrilling; Type-17 point; double-barrier coating; hex head with integrated washer; serrated threads; ideal for connector installations and wood-to-wood",
+        "diameter_in": 0.235,
+        "head": "3/8\" hex head with 0.500\" integrated washer",
+        "esr_report": "ESR-2236",
+        "thread_type": "Serrated Threads",
+        "tpi": 10,
+        "point": "Type-17",
+        "drive": "3/8\" Hex",
+        "material_standard": "Carbon steel with double-barrier coating; Type 316 SS available",
+        "applications": ["Holdown installations (HDU, HHDQ, HDQ8)", "Post base installations (ABU large sizes)", "Wood-to-wood structural connections", "Connector installations per approved code reports"],
+        "models": [
+          {"model": "SDS25112",    "length_in": 1.5,  "coating": "Double-Barrier", "thread_len_in": 1.0,   "qty_per_box": 1500},
+          {"model": "SDS25200",    "length_in": 2.0,  "coating": "Double-Barrier", "thread_len_in": 1.25,  "qty_per_box": 1300},
+          {"model": "SDS25212",    "length_in": 2.5,  "coating": "Double-Barrier", "thread_len_in": 1.5,   "qty_per_box": 1100},
+          {"model": "SDS25300",    "length_in": 3.0,  "coating": "Double-Barrier", "thread_len_in": 2.0,   "qty_per_box": 950},
+          {"model": "SDS25312",    "length_in": 3.5,  "coating": "Double-Barrier", "thread_len_in": 2.25,  "qty_per_box": 900},
+          {"model": "SDS25412",    "length_in": 4.5,  "coating": "Double-Barrier", "thread_len_in": 2.75,  "qty_per_box": 800},
+          {"model": "SDS25500",    "length_in": 5.0,  "coating": "Double-Barrier", "thread_len_in": 2.75,  "qty_per_box": 500},
+          {"model": "SDS25600",    "length_in": 6.0,  "coating": "Double-Barrier", "thread_len_in": 3.25,  "qty_per_box": 600},
+          {"model": "SDS25800",    "length_in": 8.0,  "coating": "Double-Barrier", "thread_len_in": 3.25,  "qty_per_box": 400},
+          {"model": "SDS25112SS",  "length_in": 1.5,  "coating": "Type 316 SS",    "thread_len_in": 1.0,   "qty_per_box": 1500},
+          {"model": "SDS25212SS",  "length_in": 2.5,  "coating": "Type 316 SS",    "thread_len_in": 1.5,   "qty_per_box": 1100},
+          {"model": "SDS25300SS",  "length_in": 3.0,  "coating": "Type 316 SS",    "thread_len_in": 2.0,   "qty_per_box": 950},
+          {"model": "SDS25312SS",  "length_in": 3.5,  "coating": "Type 316 SS",    "thread_len_in": 2.25,  "qty_per_box": 900}
+        ],
+        "replacement_driver_bit": "BITHEXR38-R1"
+      },
+
+      "SD": {
+        "full_name": "Strong-Drive SD Connector Screw",
+        "description": "Nail replacement screw specifically designed for connector installations; approved for LUS, HUS, hurricane ties, angles, and many other connectors; single fastener load values exceed 10d/16d common nails",
+        "esr_report": "ESR-2236",
+        "key_sizes": {
+          "SD9112": "#9 x 1-1/2\" — common connector screw",
+          "SD9212": "#9 x 2-1/2\" — joist/carrier screw",
+          "SD10212": "#10 x 2-1/2\" — heavy connector screw",
+          "SD10312": "#10 x 3\" — longer heavy connector"
+        },
+        "note": "Only approved SD screws may substitute for nails in specific connectors; verify connector listing before substituting"
+      },
+
+      "SDWH": {
+        "full_name": "Strong-Drive SDWH Timber Hex Screw",
+        "description": "High-strength hex-head timber screw for beam-to-pile and heavy timber connections; load rated",
+        "note": "SDWH27400G = 1/4\" x 4\" SDWH used for 1616HTQ heavy T-strap beam-to-pile connections"
+      },
+
+      "SDWC": {
+        "full_name": "Strong-Drive SDWC Truss Screw",
+        "description": "Truss and connector screw; used with LUS hangers when installed with 0.148x1-1/2 nails (repair option)",
+        "technical_note": "L-LUSSDWC26 — adjustment factors for LUS with 0.148x1-1/2 nails + 4.5\" SDWC screws"
+      },
+
+      "connector_nails": {
+        "SCN_SCNR": {
+          "full_name": "Strong-Drive SCN/SCNR Connector Nails",
+          "description": "SCN smooth-shank and SCNR ring-shank connector nails for structural connectors; stainless available",
+          "catalog_pages": "C-C-2024 pp. 359-360",
+          "key_sizes": {
+            "10d_common": "0.148\" x 3\"",
+            "16d_common": "0.162\" x 3.5\"",
+            "0.131x1.5": "8d x 1-1/2\" (common connector nail)",
+            "0.148x1.5": "10d x 1-1/2\" (short nail for tight spaces)"
+          }
+        }
+      }
+    },
+
+    "additional_product_lines": {
+      "bearing_plates": {
+        "BP_BPS": {
+          "description": "BP/BPS Bearing Plates for column and beam bases; catalog pp. 48-49"
+        }
+      },
+
+      "coupler_nuts": {
+        "CNW": {
+          "description": "CNW Coupler Nut for connecting threaded rod to anchor bolt; catalog p. 50"
+        }
+      },
+
+      "foundation_anchors": {
+        "FJA_FSA": {
+          "description": "FJA/FSA Foundation Anchors for wood framing to concrete; catalog p. 27"
+        },
+        "FRFP": {
+          "description": "FRFP Retrofit Foundation Plate; catalog p. 26"
+        },
+        "FWANZ": {
+          "description": "FWANZ Foundation Wall Angle; catalog p. 28"
+        }
+      },
+
+      "purlin_anchors": {
+        "HPA": {
+          "description": "HPA Purlin Anchor; catalog pp. 64-65"
+        }
+      },
+
+      "truss_connectors": {
+        "DTC_STC": {
+          "description": "DTC/STC Roof Truss Clips; catalog p. 241"
+        },
+        "DETAL": {
+          "description": "DETAL Truss Anchor; catalog pp. 264-265"
+        },
+        "TBE": {
+          "description": "TBE Truss Bearing Enhancer; catalog pp. 237-238"
+        },
+        "GBC": {
+          "description": "GBC Gable Brace Connector; catalog pp. 242-243"
+        },
+        "DGT_DGHT": {
+          "full_name": "DGT/DGHT Fire Wall Hangers",
+          "description": "Two-hour fire-rated hangers for multifamily Type III residential construction; new in C-C-2024",
+          "catalog_pages": "C-C-2024 pp. 245-247"
+        }
+      },
+
+      "deck_connectors": {
+        "DJTZ": {
+          "description": "DJTZ Deck Joist Tie; catalog p. 310"
+        },
+        "DPTZ": {
+          "description": "DPTZ Deck Post Tie; catalog p. 307"
+        },
+        "LSC": {
+          "description": "LSC Adjustable Stringer Connector; catalog pp. 308-309"
+        },
+        "FB_FBR": {
+          "description": "FB/FBR Fence Rail Bracket; catalog p. 305"
+        }
+      },
+
+      "ridge_and_hip_connectors": {
+        "HRC_HHRC": {
+          "description": "HRC/HHRC Hip-Ridge Connectors; catalog pp. 126, 168"
+        },
+        "RR": {
+          "description": "RR Ridge Rafter Connector; catalog p. 142"
+        },
+        "VPA": {
+          "description": "VPA Variable-Pitch Connector; catalog pp. 127, 169"
+        },
+        "HCP": {
+          "description": "HCP Hip Corner Plate; catalog pp. 127, 170"
+        }
+      },
+
+      "concealed_connectors": {
+        "CJTZ": {
+          "description": "CJTZ/HCJTZ Concealed Joist Tie; catalog p. 128"
+        },
+        "CBTZ": {
+          "description": "CBTZ Concealed Beam Tie; catalog p. 90"
+        },
+        "ACBH_CBH": {
+          "description": "ACBH/CBH Concealed Beam Hanger; catalog pp. 150-153; engineering letters for glulam end grain"
+        },
+        "EPCZ_CPT": {
+          "description": "EPCZ/CPTZ Concealed Post Tie; catalog pp. 72-73"
+        }
+      },
+
+      "outdoor_accents": {
+        "description": "Black powder-coat decorative structural connectors for outdoor structures",
+        "series": ["Mission Collection (APA/APB)", "Avant Collection (APVA/APVB)", "Essentials Collection (APLH/APHH for joist hangers)"],
+        "catalog_pages": "C-C-2024 pp. 332-344",
+        "note": "APRTC2, APRTA2, APRTR — Rigid Tie connectors for 2x lumber"
+      },
+
+      "stud_and_plate_ties": {
+        "DSP_RSP": {
+          "description": "DSP/RSP Double/Single Stud Plate Ties; catalog pp. 291-293"
+        },
+        "SSP": {
+          "description": "SSP Single Stud Plate; catalog pp. 291-293"
+        }
+      }
+    }
+  },
+
+  "icc_es_esr_reports": {
+    "overview": "Simpson Strong-Tie maintains 60+ ICC-ES ESR and IAPMO UES ER reports. Key reports are listed below.",
+    "source": "https://www.strongtie.com/products/connectors/wood-construction-connectors/technical-notes/code-reference-column",
+    "primary_reports": [
+      {
+        "esr": "ESR-1396",
+        "title": "Simpson Strong-Tie Joist Hangers and Framing Connectors",
+        "covers": "LUS, HUS, HHUS, and related face-mount hangers",
+        "codes": ["2012-2024 IBC", "2012-2024 IRC"]
+      },
+      {
+        "esr": "ESR-2552",
+        "title": "Simpson Strong-Tie Face-Mount Hangers",
+        "covers": "LUS, HUS, HHUS, HGUS and related face-mount solid sawn and engineered lumber hangers",
+        "codes": ["2012-2024 IBC", "2012-2024 IRC"]
+      },
+      {
+        "esr": "ESR-2330",
+        "title": "Simpson Strong-Tie Screw Hold-Down Connectors",
+        "covers": "HDU, HDUE, HDQ8, HHDQ, DTT2, PHD holdowns",
+        "codes": ["2012-2024 IBC", "2012-2024 IRC"],
+        "key_references": {
+          "ibc": "Sections 2304.10.4, 2305.1, 2305.3, 2308.10.5.1, 2308.10.5.2",
+          "sdpws": "Section 4.3.6.4.2",
+          "asce7": "Section 12.11.2.2.2"
+        }
+      },
+      {
+        "esr": "ESR-2611",
+        "title": "Simpson Strong-Tie SSTB and SB Cast-In-Place Anchor Bolts",
+        "covers": "SSTB series and SB series anchor bolts; first proprietary anchor bolt per ICC-ES AC 399",
+        "codes": ["2006-2024 IBC", "2006-2024 IRC"],
+        "material": "ASTM F-1554, Grade 36"
+      },
+      {
+        "esr": "ESR-2236",
+        "title": "Strong-Drive SDS Heavy-Duty Connector Screw and SD Connector Screw",
+        "covers": "SDS (1/4\" dia) and SD connector screws for structural applications",
+        "codes": ["2012-2024 IBC", "2012-2024 IRC"]
+      },
+      {
+        "esr": "ESR-2877",
+        "title": "Simpson Strong-Tie Connectors Attaching Wood Members to Masonry",
+        "covers": "GLB/HGLB beam seats, HGT girder tiedowns, and masonry connectors",
+        "codes": ["2009-2021 IBC", "2009-2021 IRC"]
+      },
+      {
+        "esr": "ESR-2502",
+        "title": "Simpson Strong-Tie Seismic and Hurricane Ties",
+        "covers": "H-series hurricane ties including H1A, H2.5A, H10",
+        "codes": ["2012-2024 IBC", "2012-2024 IRC"]
+      },
+      {
+        "esr": "ESR-2523",
+        "title": "Simpson Strong-Tie Master Index Report",
+        "covers": "Index of all Simpson Strong-Tie ICC-ES evaluation reports",
+        "note": "Reference this to find applicable ESR for any Simpson product"
+      },
+      {
+        "esr": "ESR-4294",
+        "title": "Simpson Strong-Tie Bypass Clip Connectors for Cold-Formed Steel",
+        "covers": "SCB, MSCB, SSB, SCS, SSC, SFC, SJC, DSSCB, FCB, MFCB, DSHS, RCKW series",
+        "codes": ["2009-2021 IBC", "2009-2021 IRC"]
+      },
+      {
+        "esr": "ESR-3006",
+        "title": "Strong-Drive Shouldered Screws",
+        "covers": "XLSH series shouldered screws for cold-formed steel connector applications"
+      },
+      {
+        "esr": "ESR-2138",
+        "title": "Simpson Strong-Tie PDPAT Powder-Actuated Fasteners",
+        "covers": "Power-actuated fasteners for connecting cold-formed steel connectors to structural steel"
+      }
+    ]
+  },
+
+  "seismic_design_categories": {
+    "overview": "Most Simpson connectors are evaluated for SDC A through F. Key distinctions:",
+    "sdc_definitions": {
+      "SDC_A_B": "Low seismic hazard; standard connector loads apply; wind controls in most cases",
+      "SDC_C": "Moderate seismic; most connectors applicable; detached 1-2 story dwellings may use SDC A&B loads per IBC 1613",
+      "SDC_D_E_F": "High seismic; special requirements; SDC C-F loads are lower; special inspection may be required"
+    },
+    "special_inspection": {
+      "ibc_trigger": "IBC Section 1704.2 (1704.1 in 2009/2006 IBC) for main seismic-force-resisting systems",
+      "irc_exception": "Special inspection generally NOT required for IRC applications"
+    },
+    "products_rated_sdc_c_through_f": [
+      "SSTB anchor bolts (separate SDC C-F load tables)",
+      "CB Column Bases (separate cracked/uncracked concrete loads for SDC C-F)",
+      "HDU/HHDQ holdowns per ESR-2330",
+      "Steel Strong-Wall SSW shearwalls",
+      "Strong-Wall WSWH wood shearwalls"
+    ],
+    "load_table_dual_columns": {
+      "note": "Many products show two load columns: 'Wind and SDC A&B' and 'SDC C-F' — always use appropriate column for project seismic design category",
+      "examples": ["SSTB tables", "CB Column Base tables", "Post base tables"]
+    }
+  },
+
+  "code_references": {
+    "IBC_2021": {
+      "connector_general": "Section 2304.10.4 — Connections and Fasteners",
+      "shearwall_holdowns": "Sections 2305.1, 2305.3, 2308.10.5.1, 2308.10.5.2",
+      "seismic_forces": "Section 1613",
+      "structural_integrity": "Section 1604.8 (wall anchorage to structural elements)"
+    },
+    "IRC_2021": {
+      "wall_bracing": "Section R602.10 — Wall Bracing",
+      "portal_frames": "Section R602.10.6.4 — Continuously sheathed portal frames",
+      "holdowns": "Sections R602.10.6.1, R602.10.6.2, R602.10.6.5, R602.10.7",
+      "engineered_design": "Section R301.1.3 — when engineer submits design"
+    },
+    "AWC_NDS": {
+      "fastener_design": "NDS Chapter 11 — Dowel-Type Fasteners (nails, screws, bolts, lag screws)",
+      "connector_testing": "ASTM D7147 — Testing joist hangers",
+      "acceptance_criteria": "ICC-ES AC13 — Acceptance Criteria for Joist Hangers",
+      "ac155": "ICC-ES AC155 — Acceptance Criteria for Hold-Down Connectors"
+    },
+    "ASCE_7": {
+      "wind_design": "ASCE 7 Section 26-31 — Wind Loads",
+      "seismic_design": "ASCE 7 Chapter 12 — Seismic Design Requirements",
+      "wall_anchorage": "ASCE 7 Section 12.11.2.2.2 — Structural Wall Anchorage"
+    },
+    "AWC_SDPWS_2021": {
+      "shearwall_design": "Section 4.3 — Wood Structural Panel Shear Walls",
+      "holdown_use": "Section 4.3.6.4.2 — Hold-Down Connectors"
+    }
+  },
+
+  "corrosion_and_coatings": {
+    "catalog_pages": "C-C-2024 pp. 14-17",
+    "coatings": {
+      "G90": {
+        "description": "Zinc galvanized; 0.90 oz/ft² zinc; standard indoor/light outdoor use",
+        "use_case": "Interior or dry exterior applications; NOT for treated lumber contact"
+      },
+      "ZMAX": {
+        "description": "G185 zinc coating; 2-3x more zinc than G90; approved for ACQ, CA-C, CCA treated lumber contact",
+        "use_case": "Exterior decks, fences, and applications in contact with preservative-treated lumber",
+        "suffix": "Z"
+      },
+      "HDG": {
+        "description": "Hot-Dip Galvanized; ASTM A153; 1.25 oz/ft² minimum; highest zinc coating",
+        "use_case": "Severe marine or industrial environments; SSTB and selected holdowns"
+      },
+      "SS": {
+        "description": "Stainless Steel Type 304 or 316; highest corrosion resistance",
+        "use_case": "Marine/coastal; ACQ lumber with high chloride exposure; swimming pool areas",
+        "suffix": "SS"
+      },
+      "paint": {
+        "description": "Simpson Strong-Tie gray paint (no corrosion protection); indoor use only",
+        "applies_to": "HHDQ bodies, some column caps"
+      }
+    },
+    "treated_lumber_compatibility": {
+      "ACQ_CA_C_MCA": "Use ZMAX, HDG, or SS connectors; hot-dip galvanized nails (ASTM A153)",
+      "CCA": "G90 may be acceptable at lower preservative levels; verify with lumber treater",
+      "fire_retardant": "Contact Simpson or lumber treater for recommendations"
+    }
+  },
+
+  "installation_general_notes": {
+    "fastener_selection": "Always use listed fastener types and sizes; substitute screws only when explicitly listed in catalog or code report",
+    "nail_installation": "Common nails per ASTM F1667; pneumatic nails per same standard; clipped-head nails may have lower lateral values",
+    "edge_distances": "Follow NDS minimum edge/end distances; connector nail holes are pre-located for code compliance",
+    "load_combinations": "ASD loads shown; do not combine with other duration increases unless specifically noted",
+    "contractor_notes": [
+      "Install all specified fasteners in all holes unless fewer nails option shown in table",
+      "Do not over-drive nails — flush with connector surface",
+      "For hurricane ties: do not fasten through truss plates from behind",
+      "Post bases: do not use for non-top-supported (fences, unbraced carports)"
+    ],
+    "engineer_consultation": "Consult a qualified design professional for all structural applications"
+  },
+
+  "product_index_summary": {
+    "total_product_families": "400+",
+    "catalog_C_C_2024_page_count": 372,
+    "alphabetical_index_excerpt": {
+      "A": ["A Angle (p.302)", "A34/A35 Framing Angle (pp.297-298)", "ABA/ABU/ABW Post Base (pp.70-71)", "AC Post Cap (pp.88-89)", "ACBH Concealed Beam Hanger (pp.150-153)", "ACHZ Heavy Adjustable Post Cap (pp.88-89)"],
+      "B": ["BA Hanger (pp.129-131)", "BC/BCS Cap/Base (p.87)", "BP/BPS Bearing Plate (pp.48-49)", "BT/BTB/BTH Brick Tie (p.273)"],
+      "C": ["CB Column Base (pp.80-81)", "CBH Concealed Beam Hanger (pp.150-153)", "CBS/CBSQ Column Base (pp.78-79)", "CC Column Cap (pp.94-95)", "CJTZ Concealed Joist Tie (p.128)", "CMST/CMSTC Coiled Strap (pp.283-285)", "CNW Coupler Nut (p.50)", "CS Coiled Strap (pp.283-285)", "CPTZ Concealed Post Tie (pp.72-73)"],
+      "D": ["DETAL Truss Anchor (pp.264-265)", "DGT/DGHT Fire Wall Hangers (pp.245-247)", "DJTZ Deck Joist Tie (p.310)", "DPTZ Deck Post Tie (p.307)", "DSC Drag Strut Connector (p.233)", "DSP Double Stud Plate Tie (pp.291-293)", "DTC Roof Truss Clip (p.241)", "DTT Deck Tension Tie (pp.54-55)"],
+      "E": ["EPB Elevated Post Base (p.74)", "EPCZ Post Cap (p.91)"],
+      "F": ["FJA Foundation Anchor (p.27)", "FRFP Retrofit Foundation Plate (p.26)", "FSA Foundation Anchor (p.27)", "FWANZ Foundation Wall Angle (p.28)"],
+      "G": ["GA Gusset Angle (p.301)", "GBC Gable Brace Connector (pp.242-243)", "GH Girder Hanger (p.252)", "GLB Beam Seat (p.197)", "GLS Hanger (pp.180-181)"],
+      "H": ["H Hurricane Ties (pp.262-263)", "HCA Hinge Connector (p.196)", "HCP Hip Corner Plate (pp.127,170)", "HIT Hanger (pp.171-173)", "HL Heavy Angle (p.303)", "HM Hurricane Tie (pp.262-263)", "HPA Purlin Anchor (pp.64-65)", "HRC/HHRC Hip-Ridge Connector (pp.126,168)", "HHDQ Holdown (see holdowns)", "HDU Holdown (see holdowns)", "HUS Hanger (see joist_hangers)", "HUS1.81 Hanger"],
+      "L": ["L Strap Tie (pp.281,348)", "LSTA Strap Tie (pp.278-279)", "LUS Hanger (see joist_hangers)", "LSC Adjustable Stringer Connector (pp.308-309)", "LSSR Rafter Hanger (pp.122-123)", "LSSJ Hanger (p.124)", "LTP4/LTP5 Lateral Tie Plate (pp.297-298)"],
+      "M": ["MSTA Strap Tie (pp.278-279)", "MSTI Strap Tie (pp.278-279)", "MSTCM Strap Tie (p.266)", "MST Strap", "MTS Twist Strap"],
+      "R": ["RR Ridge Rafter Connector (p.142)", "RSP Stud Plate Tie (pp.291-293)", "RTA/RTB/RTC Rigid Tie Connector (p.325)"],
+      "S": ["SS Stud Shoe (p.322)", "SSP Single Stud Plate (pp.291-293)", "SSTB Anchor Bolt (pp.38-41)", "STC/STCT Roof Truss Clip (p.241)", "STHD Holdown (pp.60-62)", "Steel Strong-Wall SSW (see shearwalls)"],
+      "T": ["TA Staircase Angle (p.310)", "TBE Truss Bearing Enhancer (pp.237-238)", "TBP Seat Plate (p.264)"],
+      "V": ["VPA Variable-Pitch Connector (pp.127,169)", "VTCR Valley Truss Clip (p.214)"],
+      "W": ["WB/WBC Wall Bracing (p.323)", "WP Hanger (pp.132-134)"]
+    }
+  }
+}
