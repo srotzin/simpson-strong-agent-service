@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.srotzin/simpson-strong-agent-service",
+  "title": "Simpson Strong-Tie Agent",
+  "description": "Construction product lookup for Simpson Strong-Tie structural catalog",
+  "version": "1.0.0",
+  "websiteUrl": "https://www.hiveagentiq.com",
+  "remotes": [
+    {
+      "url": "https://simpson-strong-agent.onrender.com/mcp",
+      "type": "streamable-http"
+    }
+  ],
+  "repository": {
+    "url": "https://github.com/srotzin/simpson-strong-agent-service",
+    "source": "github"
+  }
+}
