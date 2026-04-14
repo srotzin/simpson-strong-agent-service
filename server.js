@@ -182,12 +182,12 @@ app.get(['/.well-known/agent.json', '/.well-known/agent-card.json'], (req, res) 
     url: 'https://simpson-strong-agent.onrender.com',
     version: '1.0.0',
     provider: { organization: 'Hive Agent IQ', url: 'https://www.hiveagentiq.com' },
-    capabilities: { streaming: false, pushNotifications: false },
+    capabilities: { streaming: false, pushNotifications: false, stateTransitionHistory: false },
     defaultInputModes: ['application/json', 'text/plain'],
     defaultOutputModes: ['application/json'],
     skills: [
-      { id: 'product-lookup', name: 'Product Lookup', description: 'Search Simpson Strong-Tie catalog of 1,500+ construction products by name, category, or application', tags: ['construction', 'materials', 'structural', 'lookup', 'simpson'], inputModes: ['application/json', 'text/plain'], outputModes: ['application/json'] },
-      { id: 'spec-retrieval', name: 'Specification Retrieval', description: 'Get detailed specs, load tables, and installation guides for structural connectors, fasteners, and anchors', tags: ['specifications', 'engineering', 'construction', 'load-tables'], inputModes: ['application/json', 'text/plain'], outputModes: ['application/json'] }
+      { id: 'product-lookup', name: 'Product Lookup', description: 'Search Simpson Strong-Tie catalog of 1,500+ construction products by name, category, or application', tags: ['construction', 'materials', 'structural', 'lookup', 'simpson'], inputModes: ['application/json', 'text/plain'], outputModes: ['application/json'], examples: [] },
+      { id: 'spec-retrieval', name: 'Specification Retrieval', description: 'Get detailed specs, load tables, and installation guides for structural connectors, fasteners, and anchors', tags: ['specifications', 'engineering', 'construction', 'load-tables'], inputModes: ['application/json', 'text/plain'], outputModes: ['application/json'], examples: [] }
     ],
     authentication: { schemes: ['x402', 'api-key'] },
     payment: { protocol: 'x402', currency: 'USDC', network: 'base', address: '0x78B3B3C356E89b5a69C488c6032509Ef4260B6bf' }
