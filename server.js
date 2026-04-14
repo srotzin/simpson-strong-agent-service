@@ -174,7 +174,7 @@ app.get('/.well-known/ai-plugin.json', (req, res) => {
 });
 
 // ── A2A Agent Card (Google Agent2Agent protocol) ─────────────
-app.get('/.well-known/agent.json', (req, res) => {
+app.get(['/.well-known/agent.json', '/.well-known/agent-card.json'], (req, res) => {
   const host = process.env.SERVICE_URL || 'https://simpson-strong-agent.onrender.com';
   res.json({
     name: 'Simpson Strong-Tie Agent',
@@ -217,7 +217,7 @@ app.get('/.well-known/hive-payments.json', (req, res) => {
     network: 'base',
     payment_address: process.env.PAYMENT_ADDRESS || '0x78B3B3C356E89b5a69C488c6032509Ef4260B6bf',
     pricing: PRICING,
-    free_endpoints: ['/', '/health', '/.well-known/ai-plugin.json', '/.well-known/hive-payments.json', '/.well-known/simpson-agent.json', '/mcp', '/v1/api/stats', '/v1/api/applications'],
+    free_endpoints: ['/', '/health', '/.well-known/ai-plugin.json', '/.well-known/hive-payments.json', '/.well-known/simpson-agent.json', '/.well-known/agent.json', '/.well-known/agent-card.json', '/mcp', '/v1/api/stats', '/v1/api/applications'],
     auth_methods: ['x402-payment', 'x-api-key (hive internal)']
   });
 });
