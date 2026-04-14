@@ -23,6 +23,40 @@ app.use(helmet());
 app.use(cors());
 app.use(express.json({ limit: '1mb' }));
 
+// ── Root Discovery (free, no auth) ────────────────────────────
+app.get('/', (req, res) => {
+  res.json({
+    service: 'Simpson Strong-Tie Construction Agent',
+    description: 'Agent-to-agent construction hardware specialist. 400+ structural connectors, holdowns, anchors, and fasteners. Code compliance checking, load analysis, and material selection.',
+    version: '1.0.0',
+    type: 'agent-to-agent',
+    protocol: 'x402 + MCP',
+    tools: {
+      product_lookup: { description: 'Search 400+ Simpson products by name, application, or specification', price_usdc: 0.01 },
+      check_load: { description: 'Verify if a connector meets specified load requirements', price_usdc: 0.02 },
+      size_holdown: { description: 'Select correct holdown for given uplift and deflection', price_usdc: 0.03 },
+      select_hurricane_tie: { description: 'Hurricane tie selection by wind zone and member size', price_usdc: 0.02 },
+      classify_sdc: { description: 'Seismic Design Category classification', price_usdc: 0.03 },
+      corrosion_advisor: { description: 'Material selection for corrosive environments', price_usdc: 0.01 },
+      products_by_application: { description: 'Find all products for a specific application', price_usdc: 0.01 },
+      code_reference: { description: 'Building code reference lookup (IBC, IRC, ASCE)', price_usdc: 0.01 },
+      catalog_stats: { description: 'Catalog statistics and coverage', price_usdc: 0 }
+    },
+    free_endpoints: ['/health', '/', '/.well-known/ai-plugin.json', '/.well-known/hive-payments.json', '/mcp'],
+    onboard: {
+      description: 'Join the Hive Civilization for enhanced access and reputation',
+      endpoint: 'https://hivegate.onrender.com/v1/gate/onboard',
+      benefit: 'Registered agents get volume discounts and priority routing'
+    },
+    payment: {
+      protocol: 'x402',
+      currency: 'USDC',
+      network: 'base',
+      address: '0x78B3B3C356E89b5a69C488c6032509Ef4260B6bf'
+    }
+  });
+});
+
 // ── Health (free, no auth) ────────────────────────────────────
 app.get('/health', (req, res) => {
   res.json({
@@ -119,6 +153,26 @@ app.get('/.well-known/simpson-agent.json', (req, res) => {
   });
 });
 
+// ── OpenAI Plugin Manifest (free, no auth) ───────────────────
+app.get('/.well-known/ai-plugin.json', (req, res) => {
+  const host = process.env.SERVICE_URL || 'https://simpson-strong-agent.onrender.com';
+  res.json({
+    schema_version: 'v1',
+    name_for_human: 'Simpson Strong-Tie Agent',
+    name_for_model: 'simpson_strong_tie',
+    description_for_human: 'Construction hardware specialist — structural connectors, holdowns, anchors, fasteners. Code compliance and load analysis.',
+    description_for_model: 'Use this tool for any question about structural construction hardware, building code compliance, holdown selection, hurricane ties, seismic design, anchor bolts, or Simpson Strong-Tie products. Returns detailed product specifications, load ratings, and code references.',
+    auth: { type: 'none' },
+    api: {
+      type: 'openapi',
+      url: `${host}/.well-known/openapi.json`
+    },
+    logo_url: `${host}/logo.png`,
+    contact_email: 'srotzin@me.com',
+    legal_info_url: `${host}/legal`
+  });
+});
+
 // ── Payment Discovery ─────────────────────────────────────────
 app.get('/.well-known/hive-payments.json', (req, res) => {
   res.json({
@@ -126,10 +180,25 @@ app.get('/.well-known/hive-payments.json', (req, res) => {
     protocol: 'x402',
     currency: 'USDC',
     network: 'base',
-    payment_address: process.env.PAYMENT_ADDRESS || '0x742d35Cc6634C0532925a3b844Bc9e7595f7BABA',
+    payment_address: process.env.PAYMENT_ADDRESS || '0x78B3B3C356E89b5a69C488c6032509Ef4260B6bf',
     pricing: PRICING,
-    free_endpoints: ['/health', '/.well-known/*', '/v1/api/stats', '/v1/api/applications'],
+    free_endpoints: ['/', '/health', '/.well-known/ai-plugin.json', '/.well-known/hive-payments.json', '/.well-known/simpson-agent.json', '/mcp', '/v1/api/stats', '/v1/api/applications'],
     auth_methods: ['x402-payment', 'x-api-key (hive internal)']
+  });
+});
+
+// ── MCP Discovery (free, no auth) ─────────────────────────────
+app.get('/mcp', (req, res) => {
+  res.json({
+    jsonrpc: '2.0',
+    result: {
+      tools: mcpRouter.MCP_TOOLS,
+      protocol: 'JSON-RPC 2.0',
+      transport: 'HTTP POST',
+      endpoint: '/mcp',
+      methods: ['tools/list', 'tools/call'],
+      payment: 'x402 — tool calls require USDC payment; this listing is free'
+    }
   });
 });
 

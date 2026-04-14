@@ -186,4 +186,5 @@ router.post('/', (req, res) => {
   res.json({ jsonrpc:'2.0', id, error: { code:-32601, message:`Unknown method: ${method}` } });
 });
 
+router.MCP_TOOLS = MCP_TOOLS;
 module.exports = router;

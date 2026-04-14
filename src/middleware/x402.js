@@ -39,8 +39,8 @@ function recordSpentPayment(txHash) {
 
 function requirePayment(req, res, next) {
   // Free endpoints
-  const freeEndpoints = ['/health', '/.well-known/simpson-agent.json', '/v1/api/stats', '/v1/api/applications'];
-  if (freeEndpoints.some(ep => req.path === ep || req.path.startsWith(ep))) return next();
+  const freeEndpoints = ['/', '/health', '/.well-known/ai-plugin.json', '/.well-known/simpson-agent.json', '/.well-known/hive-payments.json', '/mcp', '/v1/api/stats', '/v1/api/applications'];
+  if (req.method === 'GET' && freeEndpoints.some(ep => req.path === ep || req.path.startsWith('/.well-known/'))) return next();
 
   // API key auth (internal hive services bypass payment)
   const apiKey = req.headers['x-api-key'];
@@ -65,7 +65,7 @@ function requirePayment(req, res, next) {
         cost_usdc: price,
         currency: 'USDC',
         network: 'base',
-        payment_address: process.env.PAYMENT_ADDRESS || '0x742d35Cc6634C0532925a3b844Bc9e7595f7BABA'
+        payment_address: process.env.PAYMENT_ADDRESS || '0x78B3B3C356E89b5a69C488c6032509Ef4260B6bf'
       },
       protocol: 'x402',
       instructions: 'Send USDC to payment_address on Base L2, then include tx hash in X-Payment-Hash header.'
