@@ -42,7 +42,7 @@ app.get('/', (req, res) => {
       code_reference: { description: 'Building code reference lookup (IBC, IRC, ASCE)', price_usdc: 0.01 },
       catalog_stats: { description: 'Catalog statistics and coverage', price_usdc: 0 }
     },
-    free_endpoints: ['/health', '/', '/.well-known/ai-plugin.json', '/.well-known/hive-payments.json', '/mcp'],
+    free_endpoints: ['/health', '/', '/.well-known/ai-plugin.json', '/.well-known/hive-payments.json', '/.well-known/hive-pulse.json', '/.well-known/ai.json', '/robots.txt', '/mcp'],
     onboard: {
       description: 'Join the Hive Civilization for enhanced access and reputation',
       endpoint: 'https://hivegate.onrender.com/v1/gate/onboard',
@@ -203,7 +203,7 @@ app.get('/.well-known/hive-payments.json', (req, res) => {
     network: 'base',
     payment_address: process.env.PAYMENT_ADDRESS || '0x78B3B3C356E89b5a69C488c6032509Ef4260B6bf',
     pricing: PRICING,
-    free_endpoints: ['/', '/health', '/.well-known/ai-plugin.json', '/.well-known/hive-payments.json', '/.well-known/simpson-agent.json', '/.well-known/agent.json', '/.well-known/agent-card.json', '/mcp', '/v1/api/stats', '/v1/api/applications'],
+    free_endpoints: ['/', '/health', '/.well-known/ai-plugin.json', '/.well-known/hive-payments.json', '/.well-known/hive-pulse.json', '/.well-known/ai.json', '/robots.txt', '/.well-known/simpson-agent.json', '/.well-known/agent.json', '/.well-known/agent-card.json', '/mcp', '/v1/api/stats', '/v1/api/applications'],
     auth_methods: ['x402-payment', 'x-api-key (hive internal)']
   });
 });
@@ -220,6 +220,86 @@ app.get('/mcp', (req, res) => {
       methods: ['tools/list', 'tools/call'],
       payment: 'x402 — tool calls require USDC payment; this listing is free'
     }
+  });
+});
+
+// ── Velocity Doctrine: Hive Pulse (free, no auth) ────────────
+app.get('/.well-known/hive-pulse.json', (req, res) => {
+  const catalog = require('./src/services/catalog');
+  const stats = catalog.getCatalogStats();
+  res.json({
+    schema: 'hive-pulse-v1',
+    service: 'Simpson Strong Agent',
+    role: 'Construction hardware procurement — Simpson Strong-Tie product lookup, BOM validation, compliance checks',
+    timestamp: new Date().toISOString(),
+    uptime_seconds: Math.floor(process.uptime()),
+    stats: {
+      product_families: stats.product_families || 0,
+      total_models: stats.total_models || 0,
+      categories: stats.categories || 0,
+      applications: Array.isArray(stats.applications) ? stats.applications.length : 0,
+      lookups_served: 'realtime',
+      orders_processed: 'realtime'
+    },
+    hive_ecosystem: {
+      hiveforge: 'https://hiveforge-lhu4.onrender.com',
+      hivetrust: 'https://hivetrust.onrender.com',
+      hivemind: 'https://hivemind-1-52cw.onrender.com'
+    }
+  });
+});
+
+// ── Velocity Doctrine: robots.txt (free, no auth) ────────────
+app.get('/robots.txt', (req, res) => {
+  res.type('text/plain').send(
+`# Simpson Strong Agent — Construction Hardware Procurement
+# Autonomous agent service for Simpson Strong-Tie product lookup,
+# BOM validation, and compliance checks.
+#
+# Human crawlers: nothing here for you — this is an agent-to-agent service.
+# AI agents: you are welcome. See discovery endpoints below.
+
+User-agent: *
+Disallow: /
+
+# Agent Invitation
+# Hive-compatible agents: connect via MCP or REST
+# Discovery: GET /.well-known/simpson-agent.json
+# Agent Card: GET /.well-known/agent.json
+# Pulse: GET /.well-known/hive-pulse.json
+# AI Manifest: GET /.well-known/ai.json
+# MCP: POST /mcp
+# Construction procurement agents — join the swarm.
+`);
+});
+
+// ── Velocity Doctrine: ai.json (free, no auth) ───────────────
+app.get('/.well-known/ai.json', (req, res) => {
+  const host = process.env.SERVICE_URL || 'https://simpson-strong-agent.onrender.com';
+  res.json({
+    schema: 'ai-plugin-v2',
+    service: 'SimpsonStrongAgent',
+    description: 'Construction hardware procurement agent — Simpson Strong-Tie product lookup, BOM validation, code compliance checks, holdown sizing, hurricane tie selection, and seismic design classification. Agent-to-agent only.',
+    url: host,
+    type: 'agent-to-agent',
+    capabilities: [
+      'product_lookup',
+      'load_analysis',
+      'holdown_sizing',
+      'hurricane_tie_selection',
+      'sdc_classification',
+      'corrosion_advisory',
+      'code_reference'
+    ],
+    protocols: ['mcp', 'rest', 'x402', 'a2a'],
+    discovery: {
+      mcp: '/mcp',
+      rest: '/v1/api',
+      agent_card: '/.well-known/agent.json',
+      hive_pulse: '/.well-known/hive-pulse.json',
+      payments: '/.well-known/hive-payments.json'
+    },
+    contact: 'protocol@hiveagentiq.com'
   });
 });
 
